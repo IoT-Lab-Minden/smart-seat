@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>2</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>734</x>
+      <y>108</y>
+      <w>6</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>456</x>
+      <y>68</y>
+      <w>602</w>
+      <h>302</h>
+    </coordinates>
+    <panel_attributes>req [package] Nonfunctional Requirements [nonfunctional requirements diagram]
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>704</x>
+      <y>148</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical/usability requirement&gt;&gt;
+*Device Placement*
+--
+-id = "NR3."
+-text = "The input/output devices of the system shall
+be placed at a location where the user will not be
+restricted in his normal behavior."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>692</x>
+      <y>82</y>
+      <w>88</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*SmartSeat*
+bg=red
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>466</x>
+      <y>148</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;performance requirement&gt;&gt;
+*Adjustments Speed*
+--
+-id = "NR1."
+-text = "The system shall be able to adjust
+the chair settings within 2 seconds, no
+matter what the current position are."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>148</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical/usability requirement&gt;&gt;
+*Size*
+--
+-id = "NR2"
+-text = "The system shall be small enough
+to fit under a common office chair's seat,
+so that the user will not be restricted
+in his normal behavior."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>108</y>
+      <w>216</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;90.0;1060.0;90.0;1060.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>604</x>
+      <y>108</y>
+      <w>120</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;140.0;580.0;140.0;580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;usability requirement&gt;&gt;
+*Reachability*
+--
+-id = "NR3.1."
+-text = "The system's input/output
+device shall be easily accessible
+and noticeable by the user."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>716</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>254</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;usability requirement&gt;&gt;
+*Retractability*
+--
+-id = "NR3.1.1."
+-text = "The system's input/output
+device shall be retractable."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>706</x>
+      <y>324</y>
+      <w>16</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>706</x>
+      <y>232</y>
+      <w>22</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>582</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>340</y>
+      <w>26</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*M5Stack*
+*on a foldable*
+*bracket*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>298</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;usability requirement&gt;&gt;
+*Devise Decision*
+bg=green
+--
+-id = "ND3.1."
+-text = "The system shall use the 
+the M5Stack as a retractable unit.
+(retractable in/under the armrest)"
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>706</x>
+      <y>280</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;usability requirement&gt;&gt;
+*Accessability*
+--
+-id = "NR3.2."
+-text = "The system's RFID-Sensor
+shall be placed at a easily
+accessible location."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>298</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;usability requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "ND3.2."
+-text = "The system's RFID-Sensor
+shall be placed recessed into
+the armrest."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>764</x>
+      <y>232</y>
+      <w>22</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>752</x>
+      <y>340</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*RFID-Sensor*
+*Reader/Writer*
+*placed into armrest*
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>764</x>
+      <y>324</y>
+      <w>16</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>554</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical requirement&gt;&gt;
+*Motorization*
+--
+-id = "NR2.1."
+-text = "The system shall use
+small electric motors to move
+the adjustable chair elements."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>544</x>
+      <y>258</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "ND1.1."
+-text = "The system shall use a 
+electric gearmotors to adjust
+the height of the seat."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>562</x>
+      <y>232</y>
+      <w>22</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>554</x>
+      <y>302</y>
+      <w>26</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Electric*
+*Gearmotor*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>564</x>
+      <y>284</y>
+      <w>16</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical requirement&gt;&gt;
+*Power Transmission*
+--
+-id = "NR2.2."
+-text = "The system's power
+transmission shall be capable
+to perform chair adjustments
+while the user sits on the chair."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>584</x>
+      <y>232</y>
+      <w>42</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;70.0;10.0;70.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical requirement&gt;&gt;
+*Motor Speed*
+--
+-id = "NR1.1."
+-text = "The system's adjusting
+motors shall be adaptable to
+speed and traversing distance
+restrictions."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>232</y>
+      <w>58</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;270.0;70.0;270.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>828</x>
+      <y>148</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;operational requirement&gt;&gt;
+*Survivability*
+--
+-id = "NR4."
+-text = "The system shall survive any invalid
+adjustment data received by RFID-Sensor or
+manual command."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>108</y>
+      <w>112</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>540.0;200.0;540.0;140.0;10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>808</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical requirement&gt;&gt;
+*Physical Safety*
+--
+-id = "NR4.1."
+-text = "The system shall not
+be able to destroy himself
+mechanically."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>838</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;operational requirement&gt;&gt;
+*Data Validation*
+--
+-id = "NR4.2."
+-text = "The system shall provide
+functions to validate the received
+data."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>808</x>
+      <y>254</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical requirement&gt;&gt;
+*Mechanical Design Decision*
+bg=green
+--
+-id = "ND4.1."
+-text = "The system's power
+transmission shall not be able
+to drive any mechanical
+components against a hard block."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>298</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Mechanical Design*
+*without mechanical*
+*stops *
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>280</y>
+      <w>16</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>232</y>
+      <w>22</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>886</x>
+      <y>254</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Software*
+*Validation*
+*Funtionality*
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>898</x>
+      <y>232</y>
+      <w>16</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>882</x>
+      <y>288</y>
+      <w>34</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue
+This part can also be
+considered as functional
+requirement.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>898</x>
+      <y>270</y>
+      <w>6</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>952</x>
+      <y>148</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;security requirement&gt;&gt;
+*Human Safety*
+--
+-id = "NR5."
+-text = "The system shall not be able to
+harm the user anyway."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>766</x>
+      <y>108</y>
+      <w>224</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>1100.0;200.0;1100.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;security requirement&gt;&gt;
+*Electrical Shock*
+--
+-id = "NR5.1."
+-text = "The system shall not be
+able to harm the user by electrical
+shock."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>964</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>332</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*6V Power Supply*
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>312</y>
+      <w>16</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>972</x>
+      <y>254</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Common*
+*Isolation*
+*Regulations*
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>974</x>
+      <y>232</y>
+      <w>16</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>932</x>
+      <y>286</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;physical requirement&gt;&gt;
+*Devise Decision*
+bg=green
+--
+-id = "ND5.1."
+-text = "The system shall use
+DC electrical power (6V-9V)
+to perform operations."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>948</x>
+      <y>232</y>
+      <w>22</w>
+      <h>58</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>206</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;security requirement&gt;&gt;
+*Injury Prevention*
+--
+-id = "NR5.2."
+-text = "The system shall not be
+able to harm the user by sharp
+edges, protruding parts or
+crushing."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1006</x>
+      <y>182</y>
+      <w>22</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1010</x>
+      <y>254</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Common*
+*Design*
+*Rules*
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1022</x>
+      <y>232</y>
+      <w>16</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>

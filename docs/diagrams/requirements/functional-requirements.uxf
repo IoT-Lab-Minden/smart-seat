@@ -1,0 +1,2484 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>2</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>96</y>
+      <w>116</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;130.0;560.0;130.0;560.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>202</x>
+      <y>56</y>
+      <w>646</w>
+      <h>696</h>
+    </coordinates>
+    <panel_attributes>req [package] Functional Requirements [functional requirements diagram]
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>134</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*User Adaption*
+--
+-id = "R2."
+-text = "The system shall be capable to recognize
+a user as he/she approaches the system, detect the
+user's preferred chair adjustment data and adjust all
+adjustable elements of the seat according to the read
+out data."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>454</x>
+      <y>70</y>
+      <w>88</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*SmartSeat*
+bg=red
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>134</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Manual Adjustments*
+--
+-id = "R3."
+-text = "The system shall be able to receive
+manual commands by the user and adjust the chair
+settings according to the given commands."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>134</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Data Storage*
+--
+-id = "R1."
+-text = "The system shall be able to save the current
+settings set manually by the user, so that they can be
+assigned to the specific user."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>506</x>
+      <y>96</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>242</x>
+      <y>96</y>
+      <w>230</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;70.0;1130.0;70.0;1130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>354</x>
+      <y>186</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*User Recognition*
+--
+-id = "R2.2."
+-text = "The system shall be
+capable to recognize a user 
+as he/she approaches the system."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>186</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Data Determination*
+--
+-id = "R2.1."
+-text = "The system shall be
+able to determine the user's
+preferred chair adjustment data."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>186</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Automatic Adjustments*
+--
+-id = "R2.3."
+-text = "The system shall be able
+to adjust all adjustable elements
+of the chair according to the user's
+data."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>322</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D2.3."
+-text = "The system shall use a 
+RFID-Sensor to recognize a user."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>322</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Devise Decision*
+bg=green
+--
+-id = "D2.2."
+-text = "The system shall use a 
+RFID-Chip to store user's data."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>298</x>
+      <y>384</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*RFID-Sensor*
+*Reader/Writer*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>348</y>
+      <w>72</w>
+      <h>46</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>290.0;10.0;290.0;210.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>170</y>
+      <w>56</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;40.0;260.0;40.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>652</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Rotary*
+*Potentiometer*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>544</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Linear*
+*Potentiometer*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>644</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D2.13."
+-text = "The system shall use an 
+absolute angle encoder to detect
+the angle of the backrest."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>536</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D2.10."
+-text = "The system shall use an 
+absolute distance measuring
+system to detect the height of
+the seat."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>546</y>
+      <w>26</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>654</y>
+      <w>26</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>230</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Motorized Adjustments*
+--
+-id = "R2.3.1."
+-text = "The system shall be able
+to adjust all adjustable elements
+motorized."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>608</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D2.12."
+-text = "The system shall use an 
+absolute distance measuring
+system to detect the height of
+the backrest."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>618</y>
+      <w>26</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>616</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Linear*
+*Potentiometer*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>680</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D2.14."
+-text = "The system shall use an 
+absolute distance measuring
+system to detect the offset of
+the backrest."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>690</y>
+      <w>26</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>688</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Linear*
+*Potentiometer*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>170</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>314</x>
+      <y>230</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*User Data*
+--
+-id = "R2.1.2."
+-text = "The user's preferred seat
+adjustment data shall be stored on
+a suitable device."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>314</x>
+      <y>276</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Data Storage Device*
+--
+-id = "R2.1.2.1."
+-text = "The storage device for
+the user's data shall be capable
+to store at least 6 integer numbers."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>278</x>
+      <y>302</y>
+      <w>28</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0;120.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>348</y>
+      <w>16</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>298</x>
+      <y>366</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*RFID-Chip*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>334</x>
+      <y>256</y>
+      <w>22</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>348</y>
+      <w>50</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;120.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>276</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Data Location*
+--
+-id = "R2.1.1.1."
+-text = "The System shall store
+the user's data at the user's
+body."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>278</x>
+      <y>256</y>
+      <w>22</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>230</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Data Accessibility*
+--
+-id = "R2.1.1."
+-text = "The user's data shall be
+accessible to the system at the
+moment the user approaches the
+system."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>212</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>212</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>302</y>
+      <w>30</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;60.0;10.0;60.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>374</x>
+      <y>212</y>
+      <w>22</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;540.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>394</x>
+      <y>170</y>
+      <w>48</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>220.0;80.0;220.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>186</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Manual Adjustments*
+--
+-id = "R3.1."
+-text = "The system shall be able
+to adjust all adjustable elements
+of the chair according to the user's
+commands."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>286</y>
+      <w>26</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Gearmotor*
+*with*
+*Crank Drive*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>290</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>280</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "D2.4."
+-text = "The system shall use a 
+electric gearmotor to adjust
+the height of the seat."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>290</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>280</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Motorized Seat Height Adjustment*
+--
+-id = "R2.3.1.1."
+-text = "The system shall be able to
+adjust the height of the seat motorized."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>316</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Motorized Seat Angle Adjustment*
+--
+-id = "R2.3.1.2."
+-text = "The system shall be able to
+adjust the angle of the seat motorized."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>326</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>316</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "D2.5."
+-text = "The system shall use a 
+electric gearmotor to adjust
+the angle of the seat."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>326</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>322</y>
+      <w>26</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Gearmotor*
+*with*
+*Crank Drive*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>424</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Motorized Backrest Offset Adjustment*
+--
+-id = "R2.3.1.5."
+-text = "The system shall be able to
+adjust the offset of the backrest
+motorized."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>434</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>424</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "D2.8."
+-text = "The system shall use a 
+electric gearmotor to adjust
+the offset of the backrest."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>434</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>430</y>
+      <w>26</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Gearmotor*
+*with*
+*Screw Drive*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>388</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Motorized Backrest Angle Adjustment*
+--
+-id = "R2.3.1.4."
+-text = "The system shall be able to
+adjust the angle of the backrest
+motorized."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>398</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>388</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "D2.7."
+-text = "The system shall use a 
+electric gearmotor to adjust
+the angle of the backrest."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>398</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>394</y>
+      <w>26</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Gearmotor*
+*with*
+*Crank Drive*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>358</y>
+      <w>26</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Gearmotor*
+*with*
+*Screw Drive*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>362</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>352</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "D2.6."
+-text = "The system shall use a 
+electric gearmotor to adjust
+the height of the backrest."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>362</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>352</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Motorized Backrest Height Adjustment*
+--
+-id = "R2.3.1.3."
+-text = "The system shall be able to
+adjust the height of the backrest
+motorized."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>460</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Motorized Armrest Height Adjustment*
+--
+-id = "R2.3.1.6."
+-text = "The system shall be able to
+adjust the height of the armrests
+motorized."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>470</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>460</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "D2.9."
+-text = "The system shall use a 
+electric gearmotor to adjust
+the height of the armrests."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>470</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>466</y>
+      <w>26</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Gearmotor*
+*with*
+*Crank Drive*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>212</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>212</y>
+      <w>50</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;160.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>580</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Rotary*
+*Potentiometer*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>572</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D2.11."
+-text = "The system shall use an 
+absolute angle encoder to detect
+the angle of the seat."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>582</y>
+      <w>26</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>716</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D2.15."
+-text = "The system shall use an 
+absolute angle encoder to detect
+the height of the armrests."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>726</y>
+      <w>26</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>724</y>
+      <w>26</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*Rotary*
+*Potentiometer*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>536</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Seat Height Detection*
+--
+-id = "R2.3.1.7.1."
+-text = "The system shall be able to
+measure the current seat height
+immediately without the need to
+approach a reference point."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>546</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>572</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Seat Angle Detection*
+--
+-id = "R2.3.1.7.2."
+-text = "The system shall be able to
+measure the current seat angle
+immediately without the need to
+approach a reference point."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>582</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>608</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Backrest Height Detection*
+--
+-id = "R2.3.1.7.3."
+-text = "The system shall be able to
+measure the current height of the
+backrest immediately without the need to
+approach a reference point."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>618</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>654</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>644</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Backrest Angle Detection*
+--
+-id = "R2.3.1.7.4."
+-text = "The system shall be able to
+measure the current angle of the
+backrest immediately without the need to
+approach a reference point."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>680</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Backrest Offset Detection*
+--
+-id = "R2.3.1.7.5."
+-text = "The system shall be able to
+measure the current offset of the
+backrest immediately without the need to
+approach a reference point."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>690</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>716</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Armrest Height Detection*
+--
+-id = "R2.3.1.7.6."
+-text = "The system shall be able to
+measure the current height of the
+armrests immediately without the need to
+approach a reference point."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>508</x>
+      <y>726</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>634</x>
+      <y>186</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Acceptance of commands*
+--
+-id = "R3.2."
+-text = "The system shall be able
+to receive manual commands by 
+the user."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>634</x>
+      <y>228</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Input Device*
+--
+-id = "R3.2.1."
+-text = "The system shall contain
+an input device with at least three
+pushbuttons."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>170</y>
+      <w>132</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>640.0;80.0;640.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>212</y>
+      <w>22</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>804</x>
+      <y>336</y>
+      <w>26</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;block&gt;&gt;
+bg=orange
+*M5Stack*
+*-with Display*
+*-with 3 Buttons*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>278</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D3.1."
+-text = "The system shall use the 
+left pushbutton of the M5Stack to
+select the adjustment function."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>782</x>
+      <y>288</y>
+      <w>36</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0;160.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>278</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Function Selection*
+--
+-id = "R3.2.1.1."
+-text = "The system shall contain
+a pushbutton to select the seat
+adjustment that shall be changed."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>718</x>
+      <y>288</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>314</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D3.2."
+-text = "The system shall use the 
+right pushbutton of the M5Stack to
+increase the adjustment value."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>314</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Increase Choice*
+--
+-id = "R3.2.1.2."
+-text = "The system shall contain
+a pushbutton to increase the
+selected seat adjustment value."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>718</x>
+      <y>324</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>782</x>
+      <y>326</y>
+      <w>26</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;70.0;110.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>350</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Sensor Decision*
+bg=green
+--
+-id = "D3.3."
+-text = "The system shall use the 
+middle pushbutton of the M5Stack
+to increase the adjustment value."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>350</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Decrease Choice*
+--
+-id = "R3.2.1.3."
+-text = "The system shall contain
+a pushbutton to decrease the
+selected seat adjustment value."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>718</x>
+      <y>360</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>782</x>
+      <y>348</y>
+      <w>26</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;60.0;80.0;60.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>386</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Actuator Decision*
+bg=green
+--
+-id = "D3.4."
+-text = "The system shall use the 
+display of the M5Stack to show
+the user which function is currently
+selected."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>386</y>
+      <w>54</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Adjustment Function Display*
+--
+-id = "R3.2.1.4."
+-text = "The system shall contain
+a device to show the adjustment
+function selected by the user."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>718</x>
+      <y>396</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>782</x>
+      <y>352</y>
+      <w>36</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;240.0;160.0;240.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>170</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>256</y>
+      <w>16</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>274</y>
+      <w>6</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>290</y>
+      <w>18</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>326</y>
+      <w>18</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>292</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>362</y>
+      <w>18</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>328</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>364</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>400</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>398</y>
+      <w>18</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>434</y>
+      <w>18</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>470</y>
+      <w>18</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>442</x>
+      <y>436</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>168</y>
+      <w>22</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>322</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Device Decision*
+bg=green
+--
+-id = "D2.1."
+-text = "The system shall use a 
+RFID-Reader/Writer to store the
+changed user's data on a
+RFID-Chip."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>302</y>
+      <w>36</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>160.0;10.0;160.0;60.0;10.0;60.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>232</x>
+      <y>348</y>
+      <w>70</w>
+      <h>46</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0;330.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>254</x>
+      <y>348</y>
+      <w>48</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;220.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>254</y>
+      <w>16</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>270</y>
+      <w>6</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>288</y>
+      <w>16</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>324</y>
+      <w>16</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>360</y>
+      <w>16</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>396</y>
+      <w>16</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>290</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>326</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>362</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>256</y>
+      <w>24</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;1220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>414</x>
+      <y>500</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Position Measurements*
+--
+-id = "R2.3.1.7."
+-text = "The system shall be able
+to detect the current positions
+of the adjustable seat elements
+immediately at any time to control
+the motors."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>546</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>548</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>526</y>
+      <w>16</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>582</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>618</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>654</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>690</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>726</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>584</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>620</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>656</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>692</y>
+      <w>6</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>134</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Mobility*
+--
+-id = "R4."
+-text = "The system shall be able to operate
+without being connected to a stationary
+power supply."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>524</x>
+      <y>96</y>
+      <w>214</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=.(+)
+</panel_attributes>
+    <additional_attributes>1050.0;190.0;1050.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>722</x>
+      <y>168</y>
+      <w>22</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>186</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Power Supply*
+--
+-id = "R4.1."
+-text = "The system shall contain
+a battery to provide electric power."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>228</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*Battery Capacity*
+--
+-id = "R4.1.1."
+-text = "The system's battery
+capacity shall be able to supply
+the system with electric power at
+least 2 days without charging."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>212</y>
+      <w>16</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;refine&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>752</x>
+      <y>228</y>
+      <w>46</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;requirement&gt;&gt;
+*User Warning*
+--
+-id = "R4.1.2."
+-text = "The system shall be able
+to warn the user if the battery
+needs to be charged."
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>796</x>
+      <y>240</y>
+      <w>28</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;satisfy&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0;120.0;470.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>734</x>
+      <y>212</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;deriveReqt&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;200.0;40.0;200.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>768</x>
+      <y>186</y>
+      <w>40</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue
+The prototype will not contain
+a battery because of size
+restrictions.
+It will be powered
+by a power adapter.
+(6V or higher)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>198</y>
+      <w>28</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>210</x>
+      <y>180</y>
+      <w>40</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue
+Due to sensor/device
+decisions the storage of data
+will only be able if the user's
+ID-Chip is near (about 8cm)
+to the RFID-Reader/Writer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>228</x>
+      <y>168</y>
+      <w>6</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
