@@ -1,6 +1,6 @@
 ### 28.10.19: Rohkonstruktion / vorläufige Stückliste
 
-### 04.11.19: jew . eine Servo Baugruppe mech. fertig
+### 04.11.19: jeweils eine Servo Baugruppe mechanisch fertig
 
 ### 11.11.19: Servo Baugruppe funktionsfähig
 
