@@ -1,0 +1,1 @@
+doxygen SmartSeat.doxyconf
