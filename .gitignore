@@ -1,0 +1,4 @@
+build/
+M5Stack-IDF/build/
+doxygen/
+M5Stack-IDF/doxygen/
