@@ -43,13 +43,19 @@ class RFID {
 		std::vector<byte> readBlockArray(byte blockAddress);
 		bool getCardPresence();
 		CardState getCardState();
+		void clearTargets();
+		void addTarget(Target theTarget);
+		std::vector<Target> getTargets();
 		String byteVector2String(std::vector<byte> bytes);
+		bool eraseData();
+		
 	private:
 		MFRC522* mfrc522;
 		LCD* lcdDisplay;
 		MFRC522::StatusCode status;
 		bool cardIsPresent;
 		CardState cardState;
+		std::vector<Target> targets;
 		unsigned long lastCheckTime;
 		unsigned long checkInterval;
 };

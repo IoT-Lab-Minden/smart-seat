@@ -28,7 +28,8 @@
 #ifndef LIGHT_HPP
 #define LIGHT_HPP
 #include <Arduino.h>
-#include <M5Stack.h>
+//#include <M5Stack.h>
+#include "../lib/M5Stack_new.h"
 #include "speeder.hpp"
 
 class Light

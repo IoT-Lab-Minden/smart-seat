@@ -69,6 +69,7 @@ void RFID::init(LCD* display) {
 	checkInterval = RFID_CHECK_INTERVAL;
 	cardIsPresent = false;
 	cardState = unknown;
+	targets.clear();
 }
 
 
@@ -92,6 +93,37 @@ bool RFID::getCardPresence(){
  */
 CardState RFID::getCardState(){
 	return cardState;
+}
+
+
+/**
+ * @brief The function clears the vector of Target s for the current near PICC.
+ *
+ * @return nothing
+ */
+void RFID::clearTargets(){
+	targets.clear();
+}
+
+
+/**
+ * @brief The function adds a Target to the PICC's Target vector.
+ *
+ * @param Target - the Target to be added 
+ * @return nothing
+ */
+void RFID::addTarget(Target theTarget){
+	targets.push_back(theTarget);
+}
+
+
+/**
+ * @brief The function gets the Target s that are defined on the current near PICC.
+ *
+ * @return std::vector<Target> - the vector containing the Target s
+ */
+std::vector<Target> RFID::getTargets(){
+	return targets;
 }
 
 
@@ -206,6 +238,7 @@ bool RFID::writeData(byte blockAddress, String stringData) {
 	// authenticate
 	status = (MFRC522::StatusCode) mfrc522->PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, trailerBlock, &key, &(mfrc522->uid)); 
 	// write
+	Serial.printf("Write Data: Block: %i, value %s\n", blockAddress, stringData.c_str());
 	if (status != MFRC522::STATUS_OK) {
 		Serial.print("Authentification failed: ");
 		Serial.println(mfrc522->GetStatusCodeName(status));
@@ -223,6 +256,64 @@ bool RFID::writeData(byte blockAddress, String stringData) {
 		if (readString.compareTo(stringData.substring(0, RFID_BYTES_PER_BLOCK)) != 0){
 			return false;
 		}
+	} 
+    return true;
+}
+
+
+/**
+ * @brief The function erases SmartSeat Operation value data from a PICC.
+ * @brief Erasing will only be performed if PICC is identified as SmartSeat PICC. 
+ * @brief The identify status of the PICC keeps untouched.
+ *
+ * @return bool - the return value is true if the operation succeeded, false otherwise.
+ */
+bool RFID::eraseData() {
+    MFRC522::StatusCode status;
+	MFRC522::MIFARE_Key key;	
+	byte blockAddress;
+	byte trailerBlock;
+	byte dataBlock[RFID_BYTES_PER_BLOCK] = {0}; 
+	std::vector<byte> readBlock; 
+	String readString;
+	
+	if (!cardIsPresent){
+        return false;
+    }
+	// build the key
+	for (byte i = 0; i < MFRC522::MF_KEY_SIZE; i++) { 
+		key.keyByte[i] = 0xFF; 
+	} 
+
+	if (cardState == identified) {
+		for (int i = 1; i < (sizeof(RFID_USED_BLOCKS) / sizeof(*RFID_USED_BLOCKS)); i++){
+			blockAddress = RFID_USED_BLOCKS[i];
+			trailerBlock = (blockAddress / 4 + 1) * 4 - 1;
+			// authenticate
+			status = (MFRC522::StatusCode) mfrc522->PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, trailerBlock, &key, &(mfrc522->uid)); 
+			// write
+			if (status != MFRC522::STATUS_OK) {
+				Serial.print("Authentification failed: ");
+				Serial.println(mfrc522->GetStatusCodeName(status));
+				return false;
+			} else {
+				status = (MFRC522::StatusCode) mfrc522->MIFARE_Write(blockAddress, dataBlock, RFID_BYTES_PER_BLOCK); 		
+				if (status != MFRC522::STATUS_OK) {
+					Serial.print("MIFARE_write() failed: ");
+					Serial.println(mfrc522->GetStatusCodeName(status));
+					return false;
+				}
+				// check the result
+				readBlock = readBlockArray(blockAddress);
+				for (int j = 0; j < RFID_BYTES_PER_BLOCK; j++){
+					if (readBlock[j] != 0) {
+						return false;
+					}
+				}
+			}
+		}
+	} else {
+		return false;
 	} 
     return true;
 }

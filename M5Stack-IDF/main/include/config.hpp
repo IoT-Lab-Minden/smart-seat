@@ -126,6 +126,7 @@ extern "C" {
 #define RFID_BYTES_PER_BLOCK 16
 const int RFID_USED_BLOCKS[21] = {4, 8, 9, 12, 13, 16, 17, 20, 21, 24, 25, 28, 29, 32, 33, 36, 37, 40, 41, 44, 45};
 #define RFID_IDENTIFY_BLOCK 4
+const int RFID_NAME_BLOCKS[10] = {8, 12, 16, 20, 24, 28, 32, 36, 40, 44};
 #define RFID_IDENTIFY_NAME "SmartSeat"
 enum CardState {empty, identified, unknown}; 
 
@@ -134,6 +135,7 @@ struct Target
 {
     int operationIndex;
     float percentageGoal;
+	int valueBlockOnPICC;
 };
 
 

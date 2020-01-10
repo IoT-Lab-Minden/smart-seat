@@ -28,7 +28,8 @@
 #ifndef POTENTIOMETER_HPP
 #define POTENTIOMETER_HPP
 #include <Arduino.h>
-#include <M5Stack.h>
+#include "../lib/M5Stack_new.h"
+//#include <M5Stack.h>
 
 class Potentiometer
 {

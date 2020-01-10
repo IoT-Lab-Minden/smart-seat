@@ -41,7 +41,7 @@
 Operation::Operation(String name, const unsigned char imageArray[])
 	: operationName(name), operationImageArray(imageArray)
 {
-	operationType = "wait";
+	operationType = "rfid";
 }
 
 

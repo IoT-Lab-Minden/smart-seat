@@ -29,7 +29,8 @@
 #define LCD_HPP
 
 #include "config.hpp"
-#include <M5Stack.h>
+//#include <M5Stack.h>
+#include "../lib/M5Stack_new.h"
 #include <M5Display.h>
 #include <math.h>
 

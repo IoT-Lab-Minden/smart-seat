@@ -28,7 +28,8 @@
 #ifndef HEATER_HPP
 #define HEATER_HPP
 #include <Arduino.h>
-#include <M5Stack.h>
+#include "../lib/M5Stack_new.h"
+//#include <M5Stack.h>
 #include "speeder.hpp"
 
 class Heater

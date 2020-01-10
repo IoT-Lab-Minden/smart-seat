@@ -29,6 +29,7 @@
 #include "../include/statemachine.hpp"
 #include <M5Display.h>
 
+bool serviceMode = false;
 
 /**
  * @brief Constructor
@@ -53,6 +54,63 @@ StateMachine::~StateMachine()
 
 
 /**
+ * @brief The function writes new operation data to the PICC.
+ *
+ * @return nothing
+ */
+void StateMachine::writeDataToPICC(float currentPosition)
+{
+	std::vector<Target> piccTargets;
+	bool dataWritten;
+	std::vector<byte> byteBlock;
+	int sum;
+
+	Serial.printf("StateMachine::writeDataToPICC\n");
+
+	// write new settings if PICC is present
+	dataWritten = false;
+	if (rfidUnit->getCardPresence()){
+		Serial.printf("Card is present.\n");
+		if (rfidUnit->getCardState() == identified) {
+			Serial.printf("Card is identified.\n");
+			// search, if current operation has already a value
+			piccTargets = rfidUnit->getTargets();
+			for (int i = 0; i < piccTargets.size(); i++){
+				if (piccTargets.at(i).operationIndex == currentState) {
+					// write data on PICC
+					dataWritten = rfidUnit->writeData(piccTargets.at(i).valueBlockOnPICC, String(currentPosition));
+				}
+			}
+			// if current operation has no value on the PICC, take next empty block
+			if (!dataWritten) {
+				for (int i = 0; i < (sizeof(RFID_NAME_BLOCKS) / sizeof(*RFID_NAME_BLOCKS)); i++){
+					if (!dataWritten) {
+						byteBlock = rfidUnit->readBlockArray(RFID_NAME_BLOCKS[i]);
+						sum = 0;
+						for(int j = 0 ; j < RFID_BYTES_PER_BLOCK; j++){
+							sum += byteBlock.at(j);
+						}
+						if (sum == 0) {
+							dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[i], operations.at(currentState)->getOperationName());
+							dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[i] + 1, String(currentPosition));
+						}
+					}
+				}
+			}			
+		}
+		if (rfidUnit->getCardState() == empty) {
+			Serial.printf("Card is empty.\n");
+			// write identy String on PICC
+			rfidUnit->writeData(RFID_IDENTIFY_BLOCK, RFID_IDENTIFY_NAME);
+			// write new data on PICC
+			dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[0], operations.at(currentState)->getOperationName());
+			dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[0] + 1, String(currentPosition));
+		}
+	}
+}
+
+
+/**
  * @brief The function reacts on the event: 'Button A is pressed'.
  *
  * @return nothing
@@ -60,7 +118,6 @@ StateMachine::~StateMachine()
 void StateMachine::eventButtonA()
 {
 	float currentPosition;
-	float currentVoltage = 0.0;
 
     currentState ++;
 	if (currentState >= numberOfStates) {
@@ -77,8 +134,7 @@ void StateMachine::eventButtonA()
 	if (operations.at(currentState)->getOperationType() == "servo"){
 		currentPosition = operations.at(currentState)->getOperationServo()->getPercentagePosition();
 		lcdDisplay->displayPercentage(currentPosition);
-		currentVoltage = operations.at(currentState)->getOperationServo()->getVoltage();
-		lcdDisplay->displayVoltage(currentVoltage);
+		if (serviceMode) {lcdDisplay->displayVoltage(operations.at(currentState)->getOperationServo()->getVoltage());}
 	
 		// turn off all speeders
 		for(std::size_t i = 0; i < speeders.size(); i++) {
@@ -96,23 +152,21 @@ void StateMachine::eventButtonA()
  */
 void StateMachine::eventButtonB()
 {
-	float currentPosition;
-	float currentVoltage;
 	float specificSpeed;
+	float currentPosition;
 	
 	// serial info
 	Serial.printf("Button B was pressed.\n");
 	Serial.printf("currentState = %i\n", currentState);
 	Serial.printf("operationName = '%s'\n", operations.at(currentState)->getOperationName().c_str());
 
-	// turn on spezific speeder
-	specificSpeed = operations.at(currentState)->getOperationServo()->getPercentageSpeedBackward();
-	operations.at(currentState)->getOperationServo()->getMotor()->getSpeeder()->turnOn(specificSpeed);
-
 	if (operations.at(currentState)->getOperationType() == "servo"){
+		// turn on spezific speeder
+		specificSpeed = operations.at(currentState)->getOperationServo()->getPercentageSpeedBackward();
+		operations.at(currentState)->getOperationServo()->getMotor()->getSpeeder()->turnOn(specificSpeed);
+		// move servo while button is pressed
 		while(M5.BtnB.read()){
-			currentVoltage = operations.at(currentState)->getOperationServo()->getVoltage();
-			lcdDisplay->displayVoltage(currentVoltage);
+			if (serviceMode) {lcdDisplay->displayVoltage(operations.at(currentState)->getOperationServo()->getVoltage());}
 			currentPosition = operations.at(currentState)->getOperationServo()->getPercentagePosition();
 			lcdDisplay->displayPercentage(currentPosition);
 			if(currentPosition > 0){
@@ -121,11 +175,12 @@ void StateMachine::eventButtonB()
 				operations.at(currentState)->getOperationServo()->stop();
 			}			
 		}
-		currentVoltage = operations.at(currentState)->getOperationServo()->getVoltage();
-		lcdDisplay->displayVoltage(currentVoltage);
+		// stop servo, update current position
+		operations.at(currentState)->getOperationServo()->stop();
+		if (serviceMode) {lcdDisplay->displayVoltage(operations.at(currentState)->getOperationServo()->getVoltage());}
 		currentPosition = operations.at(currentState)->getOperationServo()->getPercentagePosition();
 		lcdDisplay->displayPercentage(currentPosition);
-		operations.at(currentState)->getOperationServo()->stop();
+		writeDataToPICC(currentPosition);
 	}
 }
 
@@ -139,18 +194,22 @@ void StateMachine::eventButtonB()
  */
 void StateMachine::eventButtonC()
 {
-	float currentPosition;
-	float currentVoltage;
 	float specificSpeed;
+	float currentPosition;
+	bool eraseResult;
 	
-	// turn on spezific speeder
-	specificSpeed = operations.at(currentState)->getOperationServo()->getPercentageSpeedForward();
-	operations.at(currentState)->getOperationServo()->getMotor()->getSpeeder()->turnOn(specificSpeed);
+	// serial info
+	Serial.printf("Button C was pressed.\n");
+	Serial.printf("currentState = %i\n", currentState);
+	Serial.printf("operationName = '%s'\n", operations.at(currentState)->getOperationName().c_str());
 
 	if (operations.at(currentState)->getOperationType() == "servo"){
+		// turn on spezific speeder
+		specificSpeed = operations.at(currentState)->getOperationServo()->getPercentageSpeedForward();
+		operations.at(currentState)->getOperationServo()->getMotor()->getSpeeder()->turnOn(specificSpeed);
+		// move servo while button is pressed
 		while(M5.BtnC.read()){
-			currentVoltage = operations.at(currentState)->getOperationServo()->getVoltage();
-			lcdDisplay->displayVoltage(currentVoltage);
+			if (serviceMode) {lcdDisplay->displayVoltage(operations.at(currentState)->getOperationServo()->getVoltage());}
 			currentPosition = operations.at(currentState)->getOperationServo()->getPercentagePosition();
 			lcdDisplay->displayPercentage(currentPosition);
 			if(currentPosition < 100){
@@ -159,11 +218,22 @@ void StateMachine::eventButtonC()
 				operations.at(currentState)->getOperationServo()->stop();
 			}			
 		}
-		currentVoltage = operations.at(currentState)->getOperationServo()->getVoltage();
-		lcdDisplay->displayVoltage(currentVoltage);
+		// stop servo, update current position
+		operations.at(currentState)->getOperationServo()->stop();
+		if (serviceMode) {lcdDisplay->displayVoltage(operations.at(currentState)->getOperationServo()->getVoltage());}
 		currentPosition = operations.at(currentState)->getOperationServo()->getPercentagePosition();
 		lcdDisplay->displayPercentage(currentPosition);
-		operations.at(currentState)->getOperationServo()->stop();
+		writeDataToPICC(currentPosition);
+	}
+
+	if (operations.at(currentState)->getOperationType() == "rfid"){
+		eraseResult = rfidUnit->eraseData();
+		// serial info
+		if (eraseResult) {
+			Serial.printf("PICC data erased.\n");
+		} else {
+			Serial.printf("PICC data erasing failed.\n");
+		}
 	}
 }
 
@@ -181,48 +251,58 @@ void StateMachine::eventRfid()
 	String piccData;
 	std::vector<byte> byteBlock;
 	String readString;
-	std::vector<Target> targets;
 	Target operationTarget;
+	std::vector<Target> piccTargets;
 	float startSpeed;
 	bool targetReached;
 	
 	if (rfidUnit->getCardPresence()){
 		if (operations.at(currentState)->getOperationName() == "rfid"){
 			if (rfidUnit->getCardState() == identified){
+				// erase the 'old' targets
+				rfidUnit->clearTargets();
 				// read operation data from PICC
-				for (int i = 1; i < (sizeof(RFID_USED_BLOCKS) / sizeof(*RFID_USED_BLOCKS)); i++){
-					byteBlock = rfidUnit->readBlockArray(RFID_USED_BLOCKS[i]);
+				for (int i = 0; i < (sizeof(RFID_NAME_BLOCKS) / sizeof(*RFID_NAME_BLOCKS)); i++){
+					byteBlock = rfidUnit->readBlockArray(RFID_NAME_BLOCKS[i]);
 					readString = rfidUnit->byteVector2String(byteBlock);
+					Serial.printf("readString = '%s'\n", readString.c_str());
 					for (int j = 0; j < operations.size(); j++){
 						if (readString.compareTo(operations.at(j)->getOperationName().substring(0, RFID_BYTES_PER_BLOCK)) == 0){
 							// valid operation found, read next block for assigned value
-							byteBlock = rfidUnit->readBlockArray(RFID_USED_BLOCKS[i+1]);
+							byteBlock = rfidUnit->readBlockArray(RFID_NAME_BLOCKS[i] + 1);
 							readString = rfidUnit->byteVector2String(byteBlock);
 							operationTarget.operationIndex = j;
 							operationTarget.percentageGoal = readString.toFloat();
+							operationTarget.valueBlockOnPICC = RFID_NAME_BLOCKS[i] + 1;
 							if (operationTarget.percentageGoal >= 0 && operationTarget.percentageGoal <= 100){
-								targets.push_back(operationTarget);
+								rfidUnit->addTarget(operationTarget);
+								// serial info
+								Serial.printf("Target added: %s to %.1f%%.\n", operations.at(operationTarget.operationIndex)->getOperationName().c_str(), operationTarget.percentageGoal);
 							} 
 						}
 					}
 				}
 			}
+
+			piccTargets = rfidUnit->getTargets();
+
 			// serial info
-			Serial.printf("Targets found on PICC: %i\n", targets.size());
-			for (int i = 0; i < targets.size(); i++){
+			Serial.printf("Targets found on PICC: %i\n", piccTargets.size());
+
+			for (int i = 0; i < piccTargets.size(); i++){
 
 				// serial info
 				Serial.printf("Target %i: ", i);
-				Serial.printf("Operation: %s to ", operations.at(targets.at(i).operationIndex)->getOperationName().c_str());
-				Serial.printf("%.1f%%\n", targets.at(i).percentageGoal);
+				Serial.printf("Operation: %s to ", operations.at(piccTargets.at(i).operationIndex)->getOperationName().c_str());
+				Serial.printf("%.1f%%\n", piccTargets.at(i).percentageGoal);
 
 				// try to reach target position
-				if (targets.at(i).percentageGoal > operations.at(targets.at(i).operationIndex)->getOperationServo()->getPercentagePosition()) {
-					startSpeed = operations.at(targets.at(i).operationIndex)->getOperationServo()->getPercentageSpeedForward();
+				if (piccTargets.at(i).percentageGoal > operations.at(piccTargets.at(i).operationIndex)->getOperationServo()->getPercentagePosition()) {
+					startSpeed = operations.at(piccTargets.at(i).operationIndex)->getOperationServo()->getPercentageSpeedForward();
 				} else {
-					startSpeed = operations.at(targets.at(i).operationIndex)->getOperationServo()->getPercentageSpeedBackward();
+					startSpeed = operations.at(piccTargets.at(i).operationIndex)->getOperationServo()->getPercentageSpeedBackward();
 				}
-				targetReached = operations.at(targets.at(i).operationIndex)->getOperationServo()->moveToTarget(targets.at(i).percentageGoal, startSpeed);
+				targetReached = operations.at(piccTargets.at(i).operationIndex)->getOperationServo()->moveToTarget(piccTargets.at(i).percentageGoal, startSpeed);
 				
 				// serial info
 				if (targetReached) {
@@ -232,16 +312,10 @@ void StateMachine::eventRfid()
 				}
 			}	
 			
-			// write block 4
-			//block = 28;
-			//piccData = "backrest_distance";
-			//Serial.println(rfidUnit->writeData(block, piccData));
-			//block = 29;
-			//piccData = "40.0";
-			//Serial.println(rfidUnit->writeData(block, piccData));
-			
-			
-			
+			// turn off all speeders
+			for(std::size_t i = 0; i < speeders.size(); i++) {
+				speeders.at(i)->turnOff();
+			} 
 		}	
 	}
 }

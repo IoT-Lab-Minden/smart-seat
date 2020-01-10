@@ -26,7 +26,7 @@
  * which is the designated start of the program.
  */
 
-#include <M5Stack.h>
+#include "../lib/M5Stack_new.h"
 #include "../include/smartseat.hpp"
 
 #if CONFIG_FREERTOS_UNICORE
@@ -38,14 +38,20 @@
 
 SmartSeat smartseat("The incredible Seat");
 
+
 // The setup routine runs once when M5Stack starts up
 void setup(){
+
     // M5.begin with LCDEnable, SDEnable, SerialEnable, I2CEnable
+	// The begin function is located in the library "M5Stack_new".
+	// It is necessary, to start the M5 without enabling Serial, which the 'old' component "M5Stack" doesn't allow.  	
 	M5.begin(true, false, false, true); 
-    // M5.begin with LCDEnable=true, SDEnable=false
-	//M5.begin(true, false);
-    //Serial.end();
-	//Serial.begin(115200);
+
+	// Serial may not be started if the SmartSeat shall operate normally.
+	// Erase the outcomment of the line for debug purposes, but don't give electrical power to the motor drivers then.
+	// Serial.begin(115200);
+
+	// begin Wire library for I2C-RFID-functionality
 	Wire.begin();
 	
 	// initialize the SmartSeat

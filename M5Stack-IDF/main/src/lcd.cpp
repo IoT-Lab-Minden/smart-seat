@@ -70,6 +70,7 @@ void LCD::displayImageArray(const unsigned char imageArray[])
 /**
  * @brief The function displays a voltage value [0-4095] on the display.
  * @brief This function is mainly intended for service and setup purposes.
+ * @brief If you really need the function, change the variable 'serviceMode' to 'true' inside the StateMachine.
  *
  * @param voltage - a uint16_t value representing a voltage value (0-4095)
  * @return nothing

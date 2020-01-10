@@ -166,12 +166,21 @@ float Servo::getPercentagePosition(){
 	float currentVoltage = getVoltage();
 	float minVoltage = servoPotentiometer->getMinVoltageLevel();
 	float maxVoltage = servoPotentiometer->getMaxVoltageLevel();
+	float percentage;
+
 	if (maxVoltage - minVoltage > 0){
 		if(getChangePotiDirection()){
-			return 100 - (currentVoltage - minVoltage) / (maxVoltage - minVoltage) * 100;
+			percentage = 100 - (currentVoltage - minVoltage) / (maxVoltage - minVoltage) * 100;
 		} else {
-			return (currentVoltage - minVoltage) / (maxVoltage - minVoltage) * 100;
+			percentage = (currentVoltage - minVoltage) / (maxVoltage - minVoltage) * 100;
 		}
+		if (percentage > 100.0) {
+			percentage = 100.0;
+		}
+		if (percentage < 0.0) {
+			percentage = 0.0;
+		}
+		return percentage;
 	} else {
 		return -100.0;
 	}
@@ -198,37 +207,44 @@ bool Servo::moveToTarget(float target, float startSpeed){
 	if (currentPosition > target){
 		while (getPercentagePosition() > target && getPercentagePosition() > 0 && millis() < startTime + SERVO_TIMEOUT){
 			currentPosition = getPercentagePosition();
+			if(currentPosition > target){
+				moveBackward();
+			} else {
+				stop();
+			}
 			if (abs(currentPosition - target) < 10.0){
 				getMotor()->getSpeeder()->turnOn(startSpeed * 0.8);
 			}
 			if (abs(currentPosition - target) < 5.0){
 				getMotor()->getSpeeder()->turnOn(startSpeed * 0.6);
 			}
-			if(currentPosition > target){
-				moveBackward();
-			} else {
-				stop();
+			if (abs(currentPosition - target) < 1.0){
+				getMotor()->getSpeeder()->turnOn(startSpeed * 0.2);
 			}
 		}
 		stop();
 	} else {
 		while (getPercentagePosition() < target && getPercentagePosition() < 100 && millis() < startTime + SERVO_TIMEOUT){
 			currentPosition = getPercentagePosition();
+			if(currentPosition < target){
+				moveForward();
+			} else {
+				stop();
+			}
 			if (abs(currentPosition - target) < 10.0){
 				getMotor()->getSpeeder()->turnOn(startSpeed * 0.8);
 			}
 			if (abs(currentPosition - target) < 5.0){
 				getMotor()->getSpeeder()->turnOn(startSpeed * 0.6);
 			}
-			if(currentPosition < target){
-				moveForward();
-			} else {
-				stop();
+			if (abs(currentPosition - target) < 1.0){
+				getMotor()->getSpeeder()->turnOn(startSpeed * 0.2);
 			}
 		}
 		stop();
 	}
 	stop();
+	getMotor()->getSpeeder()->turnOff();
 
 	// check result
 	if (millis() < startTime + SERVO_TIMEOUT) {

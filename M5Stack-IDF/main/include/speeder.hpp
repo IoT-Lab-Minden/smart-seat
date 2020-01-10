@@ -29,7 +29,8 @@
 #ifndef SPEEDER_HPP
 #define SPEEDER_HPP
 #include <Arduino.h>
-#include <M5Stack.h>
+#include "../lib/M5Stack_new.h"
+//#include <M5Stack_new.h>
 
 class Speeder
 {

@@ -29,7 +29,8 @@
 #ifndef STATEMACHINE_HPP
 #define STATEMACHINE_HPP
 
-#include <M5Stack.h>
+//#include <M5Stack.h>
+#include "../lib/M5Stack_new.h"
 #include "config.hpp"
 #include "operation.hpp"
 #include "speeder.hpp"
@@ -46,12 +47,14 @@ class StateMachine{
         void eventButtonB();
         void eventButtonC();
         void eventRfid();
+		void writeDataToPICC(float currentPosition);
+		
     private:
 		RFID* rfidUnit;
 		LCD* lcdDisplay;
 		std::vector<Operation*> operations;
 		std::vector<Speeder*> speeders;
-        uint16_t numberOfStates;
+        uint16_t numberOfStates = 0;
 		int currentState = 0;
 };
 #endif
