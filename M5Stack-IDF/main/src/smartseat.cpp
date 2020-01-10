@@ -51,6 +51,7 @@
  */
 SmartSeat::SmartSeat(String name) 
 {
+	seatName = name;
 	lcdDisplay = new LCD();
 	rfidUnit = new RFID();
 	stateMachine = new StateMachine();

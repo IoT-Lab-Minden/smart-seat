@@ -44,6 +44,7 @@ public:
 	RFID* getRfidUnit();
 
 private:
+	String seatName;
 	LCD* lcdDisplay;
 	RFID* rfidUnit;
 	StateMachine* stateMachine;
