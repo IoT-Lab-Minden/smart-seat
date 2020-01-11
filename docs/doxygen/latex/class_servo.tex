@@ -1,0 +1,232 @@
+\hypertarget{class_servo}{}\doxysection{Servo Class Reference}
+\label{class_servo}\index{Servo@{Servo}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_servo_a10e7307272afffa17802bd7675dba3b1}{Servo}} (\mbox{\hyperlink{class_motor}{Motor}} $\ast$motor, \mbox{\hyperlink{class_potentiometer}{Potentiometer}} $\ast$potentiometer, bool change\+Mot\+Dir, bool change\+Poti\+Dir, float perc\+Speed\+Forward, float perc\+Speed\+Backward)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_servo_acb51bf4d970b071741ba76349a431fb0}{$\sim$\+Servo}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_potentiometer}{Potentiometer}} $\ast$ \mbox{\hyperlink{class_servo_acb368f97f11c859e62f80d716c08cfff}{get\+Potentiometer}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s potentiometer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_motor}{Motor}} $\ast$ \mbox{\hyperlink{class_servo_ab83eca51930bb250226678c72f45cfc1}{get\+Motor}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_servo_a64208439ce117aaaee3dc828db73aa55}{get\+Voltage}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_potentiometer}{Potentiometer}} voltage. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_servo_afd44aeeae015470719c76b7f03ce8550}{get\+Percentage\+Position}} ()
+\begin{DoxyCompactList}\small\item\em The function get the current percentage position of the \mbox{\hyperlink{class_servo}{Servo}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_servo_a1a76c816538f8b622c86afb39318331b}{get\+Percentage\+Speed\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned percentaged speed in forward direction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_servo_a7bf84399fd0715c8ec3828f8b5677da3}{get\+Percentage\+Speed\+Backward}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned percentaged speed in backward direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_servo_af15b1cd6c7851e9522b245b7f7b9936b}{get\+Change\+Poti\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em The function gets if the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_potentiometer}{Potentiometer}} direction is flipped. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servo_a3faafeb834a2dcd6ed3c6bc6e7d96fc3}{move\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} to move forward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servo_a08ad763549f08f57a6d1c3bf654b2e7f}{move\+Backward}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} to move backward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servo_aef590ce5ad82d3373abecd04c521d163}{stop}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} to stop. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_servo_a4adaf0d0419d6c2804617c55b20059d1}{move\+To\+Target}} (float target, float start\+Speed)
+\begin{DoxyCompactList}\small\item\em The function moves the \mbox{\hyperlink{class_servo}{Servo}} to a given position target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_servo_a10e7307272afffa17802bd7675dba3b1}\label{class_servo_a10e7307272afffa17802bd7675dba3b1}} 
+\index{Servo@{Servo}!Servo@{Servo}}
+\index{Servo@{Servo}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{Servo()}{Servo()}}
+{\footnotesize\ttfamily Servo\+::\+Servo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_motor}{Motor}} $\ast$}]{motor,  }\item[{\mbox{\hyperlink{class_potentiometer}{Potentiometer}} $\ast$}]{potentiometer,  }\item[{bool}]{change\+Mot\+Dir,  }\item[{bool}]{change\+Poti\+Dir,  }\item[{float}]{perc\+Speed\+Forward,  }\item[{float}]{perc\+Speed\+Backward }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_servo}{Servo}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor} & -\/ a pointer to the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned \mbox{\hyperlink{class_motor}{Motor}} class instance \\
+\hline
+{\em potentiometer} & -\/ a pointer to the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned \mbox{\hyperlink{class_potentiometer}{Potentiometer}} class instance \\
+\hline
+{\em change\+Mot\+Dir} & -\/ a bool value that defines if the \mbox{\hyperlink{class_motor}{Motor}} direction shall be inverted \\
+\hline
+{\em change\+Poti\+Dir} & -\/ a bool value that defines if the \mbox{\hyperlink{class_potentiometer}{Potentiometer}} direction shall be inverted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_acb51bf4d970b071741ba76349a431fb0}\label{class_servo_acb51bf4d970b071741ba76349a431fb0}} 
+\index{Servo@{Servo}!````~Servo@{$\sim$Servo}}
+\index{````~Servo@{$\sim$Servo}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Servo()}{~Servo()}}
+{\footnotesize\ttfamily Servo\+::$\sim$\+Servo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_servo}{Servo}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_servo_af15b1cd6c7851e9522b245b7f7b9936b}\label{class_servo_af15b1cd6c7851e9522b245b7f7b9936b}} 
+\index{Servo@{Servo}!getChangePotiDirection@{getChangePotiDirection}}
+\index{getChangePotiDirection@{getChangePotiDirection}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{getChangePotiDirection()}{getChangePotiDirection()}}
+{\footnotesize\ttfamily bool Servo\+::get\+Change\+Poti\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets if the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_potentiometer}{Potentiometer}} direction is flipped. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ the return value is true if the \mbox{\hyperlink{class_potentiometer}{Potentiometer}} direction is flipped, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_ab83eca51930bb250226678c72f45cfc1}\label{class_servo_ab83eca51930bb250226678c72f45cfc1}} 
+\index{Servo@{Servo}!getMotor@{getMotor}}
+\index{getMotor@{getMotor}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{getMotor()}{getMotor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_motor}{Motor}} $\ast$ Servo\+::get\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}}. 
+
+\begin{DoxyReturn}{Returns}
+Motor$\ast$ -\/ a pointer to the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned \mbox{\hyperlink{class_motor}{Motor}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_afd44aeeae015470719c76b7f03ce8550}\label{class_servo_afd44aeeae015470719c76b7f03ce8550}} 
+\index{Servo@{Servo}!getPercentagePosition@{getPercentagePosition}}
+\index{getPercentagePosition@{getPercentagePosition}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{getPercentagePosition()}{getPercentagePosition()}}
+{\footnotesize\ttfamily float Servo\+::get\+Percentage\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function get the current percentage position of the \mbox{\hyperlink{class_servo}{Servo}}. 
+
+\begin{DoxyReturn}{Returns}
+float -\/ the return value represents the current percentage position of the \mbox{\hyperlink{class_servo}{Servo}}. If the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_potentiometer}{Potentiometer}} is initialized irregular the function returns -\/100.\+0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_a7bf84399fd0715c8ec3828f8b5677da3}\label{class_servo_a7bf84399fd0715c8ec3828f8b5677da3}} 
+\index{Servo@{Servo}!getPercentageSpeedBackward@{getPercentageSpeedBackward}}
+\index{getPercentageSpeedBackward@{getPercentageSpeedBackward}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{getPercentageSpeedBackward()}{getPercentageSpeedBackward()}}
+{\footnotesize\ttfamily float Servo\+::get\+Percentage\+Speed\+Backward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned percentaged speed in backward direction. 
+
+\begin{DoxyReturn}{Returns}
+float -\/ the return value is the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned percentaged (0.\+0 -\/ 100.\+0) backward speed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_a1a76c816538f8b622c86afb39318331b}\label{class_servo_a1a76c816538f8b622c86afb39318331b}} 
+\index{Servo@{Servo}!getPercentageSpeedForward@{getPercentageSpeedForward}}
+\index{getPercentageSpeedForward@{getPercentageSpeedForward}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{getPercentageSpeedForward()}{getPercentageSpeedForward()}}
+{\footnotesize\ttfamily float Servo\+::get\+Percentage\+Speed\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned percentaged speed in forward direction. 
+
+\begin{DoxyReturn}{Returns}
+float -\/ the return value is the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned percentaged (0.\+0 -\/ 100.\+0) forward speed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_acb368f97f11c859e62f80d716c08cfff}\label{class_servo_acb368f97f11c859e62f80d716c08cfff}} 
+\index{Servo@{Servo}!getPotentiometer@{getPotentiometer}}
+\index{getPotentiometer@{getPotentiometer}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{getPotentiometer()}{getPotentiometer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_potentiometer}{Potentiometer}} $\ast$ Servo\+::get\+Potentiometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s potentiometer. 
+
+\begin{DoxyReturn}{Returns}
+Potentiometer$\ast$ -\/ a pointer to the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s assigned \mbox{\hyperlink{class_potentiometer}{Potentiometer}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_a64208439ce117aaaee3dc828db73aa55}\label{class_servo_a64208439ce117aaaee3dc828db73aa55}} 
+\index{Servo@{Servo}!getVoltage@{getVoltage}}
+\index{getVoltage@{getVoltage}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{getVoltage()}{getVoltage()}}
+{\footnotesize\ttfamily uint16\+\_\+t Servo\+::get\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_potentiometer}{Potentiometer}} voltage. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t -\/ the value represents the \mbox{\hyperlink{class_potentiometer}{Potentiometer}}\textquotesingle{}s current voltage level (0-\/4096) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_a08ad763549f08f57a6d1c3bf654b2e7f}\label{class_servo_a08ad763549f08f57a6d1c3bf654b2e7f}} 
+\index{Servo@{Servo}!moveBackward@{moveBackward}}
+\index{moveBackward@{moveBackward}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{moveBackward()}{moveBackward()}}
+{\footnotesize\ttfamily void Servo\+::move\+Backward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} to move backward. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_a3faafeb834a2dcd6ed3c6bc6e7d96fc3}\label{class_servo_a3faafeb834a2dcd6ed3c6bc6e7d96fc3}} 
+\index{Servo@{Servo}!moveForward@{moveForward}}
+\index{moveForward@{moveForward}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{moveForward()}{moveForward()}}
+{\footnotesize\ttfamily void Servo\+::move\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} to move forward. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_a4adaf0d0419d6c2804617c55b20059d1}\label{class_servo_a4adaf0d0419d6c2804617c55b20059d1}} 
+\index{Servo@{Servo}!moveToTarget@{moveToTarget}}
+\index{moveToTarget@{moveToTarget}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{moveToTarget()}{moveToTarget()}}
+{\footnotesize\ttfamily bool Servo\+::move\+To\+Target (\begin{DoxyParamCaption}\item[{float}]{target,  }\item[{float}]{start\+Speed }\end{DoxyParamCaption})}
+
+
+
+The function moves the \mbox{\hyperlink{class_servo}{Servo}} to a given position target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & -\/ float value that represents the percentage amount of voltage level at the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_potentiometer}{Potentiometer}} that shall be reached \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ the return value is true if the voltage target could be reached, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_servo_aef590ce5ad82d3373abecd04c521d163}\label{class_servo_aef590ce5ad82d3373abecd04c521d163}} 
+\index{Servo@{Servo}!stop@{stop}}
+\index{stop@{stop}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Servo\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_servo}{Servo}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} to stop. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{servo_8hpp}{servo.\+hpp}}\item 
+main/src/\mbox{\hyperlink{servo_8cpp}{servo.\+cpp}}\end{DoxyCompactItemize}

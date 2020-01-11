@@ -1,0 +1,101 @@
+\hypertarget{class_smart_seat}{}\doxysection{Smart\+Seat Class Reference}
+\label{class_smart_seat}\index{SmartSeat@{SmartSeat}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_smart_seat_a19385e2a91a99ba7b3b57d3096139b55}{Smart\+Seat}} (String name)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_smart_seat_abb98ef8cc8d8fdf46e08d1aea11adcba}{$\sim$\+Smart\+Seat}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_smart_seat_a5d98ba430adcbba9a330d0230c854ae4}{init}} ()
+\begin{DoxyCompactList}\small\item\em The method initializes the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s hardware and operations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_state_machine}{State\+Machine}} $\ast$ \mbox{\hyperlink{class_smart_seat_ade278afc38de75aa87a9b3e828c3be03}{get\+State\+Machine}} ()
+\begin{DoxyCompactList}\small\item\em The function gets a pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_state_machine}{State\+Machine}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} $\ast$ \mbox{\hyperlink{class_smart_seat_a22aa7a70a5940ded8c9432342d665ec5}{get\+Rfid\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em The function gets a pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_smart_seat_a19385e2a91a99ba7b3b57d3096139b55}\label{class_smart_seat_a19385e2a91a99ba7b3b57d3096139b55}} 
+\index{SmartSeat@{SmartSeat}!SmartSeat@{SmartSeat}}
+\index{SmartSeat@{SmartSeat}!SmartSeat@{SmartSeat}}
+\doxysubsubsection{\texorpdfstring{SmartSeat()}{SmartSeat()}}
+{\footnotesize\ttfamily Smart\+Seat\+::\+Smart\+Seat (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ a String that defines the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smart_seat_abb98ef8cc8d8fdf46e08d1aea11adcba}\label{class_smart_seat_abb98ef8cc8d8fdf46e08d1aea11adcba}} 
+\index{SmartSeat@{SmartSeat}!````~SmartSeat@{$\sim$SmartSeat}}
+\index{````~SmartSeat@{$\sim$SmartSeat}!SmartSeat@{SmartSeat}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmartSeat()}{~SmartSeat()}}
+{\footnotesize\ttfamily Smart\+Seat\+::$\sim$\+Smart\+Seat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_smart_seat_a22aa7a70a5940ded8c9432342d665ec5}\label{class_smart_seat_a22aa7a70a5940ded8c9432342d665ec5}} 
+\index{SmartSeat@{SmartSeat}!getRfidUnit@{getRfidUnit}}
+\index{getRfidUnit@{getRfidUnit}!SmartSeat@{SmartSeat}}
+\doxysubsubsection{\texorpdfstring{getRfidUnit()}{getRfidUnit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} $\ast$ Smart\+Seat\+::get\+Rfid\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets a pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} unit. 
+
+\begin{DoxyReturn}{Returns}
+R\+F\+I\+D$\ast$ -\/ the pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s assigned \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} unit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smart_seat_ade278afc38de75aa87a9b3e828c3be03}\label{class_smart_seat_ade278afc38de75aa87a9b3e828c3be03}} 
+\index{SmartSeat@{SmartSeat}!getStateMachine@{getStateMachine}}
+\index{getStateMachine@{getStateMachine}!SmartSeat@{SmartSeat}}
+\doxysubsubsection{\texorpdfstring{getStateMachine()}{getStateMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state_machine}{State\+Machine}} $\ast$ Smart\+Seat\+::get\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets a pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_state_machine}{State\+Machine}}. 
+
+\begin{DoxyReturn}{Returns}
+State\+Machine$\ast$ -\/ the pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s assigned \mbox{\hyperlink{class_state_machine}{State\+Machine}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_smart_seat_a5d98ba430adcbba9a330d0230c854ae4}\label{class_smart_seat_a5d98ba430adcbba9a330d0230c854ae4}} 
+\index{SmartSeat@{SmartSeat}!init@{init}}
+\index{init@{init}!SmartSeat@{SmartSeat}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Smart\+Seat\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The method initializes the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s hardware and operations. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{smartseat_8hpp}{smartseat.\+hpp}}\item 
+main/src/\mbox{\hyperlink{smartseat_8cpp}{smartseat.\+cpp}}\end{DoxyCompactItemize}

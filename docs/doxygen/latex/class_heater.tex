@@ -1,0 +1,133 @@
+\hypertarget{class_heater}{}\doxysection{Heater Class Reference}
+\label{class_heater}\index{Heater@{Heater}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_heater_a827059db73e47e49b231ca22077b3a6a}{Heater}} (uint8\+\_\+t gpio01, \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$speeder)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_heater_ab69bf91ffaaac46092dd1faa2ccc80ea}{$\sim$\+Heater}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_heater_a3ee49f5e5c80d93aab86688c15058b47}{get\+Pin01}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the number of the G\+P\+IO pin that drives the \mbox{\hyperlink{class_heater}{Heater}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ \mbox{\hyperlink{class_heater_a9f93a4d0f5a32c0d574c91c0e758d7cd}{get\+Speeder}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the assigned \mbox{\hyperlink{class_speeder}{Speeder}} of the \mbox{\hyperlink{class_heater}{Heater}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_heater_a552113e9f0dec7ca130bc6c3dcc1bd73}{init}} ()
+\begin{DoxyCompactList}\small\item\em The function inits the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s pin as output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_heater_a1930c4d6e324a1ab0bde4fe2d58c0f91}{turn\+On}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s pin to on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_heater_ab175f8232df6473ba09dc702b4e5fb64}{turn\+Out}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s pin to off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_heater_a827059db73e47e49b231ca22077b3a6a}\label{class_heater_a827059db73e47e49b231ca22077b3a6a}} 
+\index{Heater@{Heater}!Heater@{Heater}}
+\index{Heater@{Heater}!Heater@{Heater}}
+\doxysubsubsection{\texorpdfstring{Heater()}{Heater()}}
+{\footnotesize\ttfamily Heater\+::\+Heater (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio01,  }\item[{\mbox{\hyperlink{class_speeder}{Speeder}} $\ast$}]{speeder }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_heater}{Heater}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio01} & -\/ a uint8\+\_\+t value that represents the microcontroller\textquotesingle{}s G\+P\+IO number that drives the \mbox{\hyperlink{class_heater}{Heater}} \\
+\hline
+{\em speeder} & -\/ a pointer to the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s assigned \mbox{\hyperlink{class_speeder}{Speeder}} class instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heater_ab69bf91ffaaac46092dd1faa2ccc80ea}\label{class_heater_ab69bf91ffaaac46092dd1faa2ccc80ea}} 
+\index{Heater@{Heater}!````~Heater@{$\sim$Heater}}
+\index{````~Heater@{$\sim$Heater}!Heater@{Heater}}
+\doxysubsubsection{\texorpdfstring{$\sim$Heater()}{~Heater()}}
+{\footnotesize\ttfamily Heater\+::$\sim$\+Heater (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_heater}{Heater}} object.
+
+\begin{DoxyReturn}{Returns}
+no return 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_heater_a3ee49f5e5c80d93aab86688c15058b47}\label{class_heater_a3ee49f5e5c80d93aab86688c15058b47}} 
+\index{Heater@{Heater}!getPin01@{getPin01}}
+\index{getPin01@{getPin01}!Heater@{Heater}}
+\doxysubsubsection{\texorpdfstring{getPin01()}{getPin01()}}
+{\footnotesize\ttfamily uint8\+\_\+t Heater\+::get\+Pin01 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the number of the G\+P\+IO pin that drives the \mbox{\hyperlink{class_heater}{Heater}}. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t -\/ the G\+P\+I\+O-\/number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heater_a9f93a4d0f5a32c0d574c91c0e758d7cd}\label{class_heater_a9f93a4d0f5a32c0d574c91c0e758d7cd}} 
+\index{Heater@{Heater}!getSpeeder@{getSpeeder}}
+\index{getSpeeder@{getSpeeder}!Heater@{Heater}}
+\doxysubsubsection{\texorpdfstring{getSpeeder()}{getSpeeder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ Heater\+::get\+Speeder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the assigned \mbox{\hyperlink{class_speeder}{Speeder}} of the \mbox{\hyperlink{class_heater}{Heater}}. 
+
+\begin{DoxyReturn}{Returns}
+Speeder$\ast$ -\/ a pointer to the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s assigned \mbox{\hyperlink{class_speeder}{Speeder}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heater_a552113e9f0dec7ca130bc6c3dcc1bd73}\label{class_heater_a552113e9f0dec7ca130bc6c3dcc1bd73}} 
+\index{Heater@{Heater}!init@{init}}
+\index{init@{init}!Heater@{Heater}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Heater\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function inits the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s pin as output. 
+
+\begin{DoxyReturn}{Returns}
+no return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heater_a1930c4d6e324a1ab0bde4fe2d58c0f91}\label{class_heater_a1930c4d6e324a1ab0bde4fe2d58c0f91}} 
+\index{Heater@{Heater}!turnOn@{turnOn}}
+\index{turnOn@{turnOn}!Heater@{Heater}}
+\doxysubsubsection{\texorpdfstring{turnOn()}{turnOn()}}
+{\footnotesize\ttfamily void Heater\+::turn\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s pin to on. 
+
+\begin{DoxyReturn}{Returns}
+no return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heater_ab175f8232df6473ba09dc702b4e5fb64}\label{class_heater_ab175f8232df6473ba09dc702b4e5fb64}} 
+\index{Heater@{Heater}!turnOut@{turnOut}}
+\index{turnOut@{turnOut}!Heater@{Heater}}
+\doxysubsubsection{\texorpdfstring{turnOut()}{turnOut()}}
+{\footnotesize\ttfamily void Heater\+::turn\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_heater}{Heater}}\textquotesingle{}s pin to off. 
+
+\begin{DoxyReturn}{Returns}
+no return 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{heater_8hpp}{heater.\+hpp}}\item 
+main/src/\mbox{\hyperlink{heater_8cpp}{heater.\+cpp}}\end{DoxyCompactItemize}

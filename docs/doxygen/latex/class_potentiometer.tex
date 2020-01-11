@@ -1,0 +1,105 @@
+\hypertarget{class_potentiometer}{}\doxysection{Potentiometer Class Reference}
+\label{class_potentiometer}\index{Potentiometer@{Potentiometer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_potentiometer_aa1ffba5bd5d2fda51d7e7ee4fd76d857}{Potentiometer}} (uint8\+\_\+t pin, uint16\+\_\+t min\+Volts, uint16\+\_\+t max\+Volts)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_potentiometer_a30f80d25ee65da9303dc043355019f1e}{$\sim$\+Potentiometer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_potentiometer_a9bab64885ce7b1769ea240cbf22771b4}{get\+Voltage}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the voltage at the \mbox{\hyperlink{class_potentiometer}{Potentiometer}}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_potentiometer_afc1082bf402babc4f6b720b4b59e356d}{get\+Min\+Voltage\+Level}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the minimal safe voltage of the \mbox{\hyperlink{class_potentiometer}{Potentiometer}}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_potentiometer_a644dd231103e50a233af034a80476253}{get\+Max\+Voltage\+Level}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the maximal safe voltage of the \mbox{\hyperlink{class_potentiometer}{Potentiometer}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_potentiometer_aa1ffba5bd5d2fda51d7e7ee4fd76d857}\label{class_potentiometer_aa1ffba5bd5d2fda51d7e7ee4fd76d857}} 
+\index{Potentiometer@{Potentiometer}!Potentiometer@{Potentiometer}}
+\index{Potentiometer@{Potentiometer}!Potentiometer@{Potentiometer}}
+\doxysubsubsection{\texorpdfstring{Potentiometer()}{Potentiometer()}}
+{\footnotesize\ttfamily Potentiometer\+::\+Potentiometer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{min\+Volts,  }\item[{uint16\+\_\+t}]{max\+Volts }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_potentiometer}{Potentiometer}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & -\/ a uint8\+\_\+t value that represents the microcontroller\textquotesingle{}s G\+P\+IO number to that the \mbox{\hyperlink{class_potentiometer}{Potentiometer}} is attached \\
+\hline
+{\em min\+Volts} & -\/ a uint16\+\_\+t value that desribes the minimal safe voltage \mbox{[}0 -\/ 4095\mbox{]} the \mbox{\hyperlink{class_potentiometer}{Potentiometer}} should deliver during operation \\
+\hline
+{\em max\+Volts} & -\/ a uint16\+\_\+t value that desribes the maximal safe voltage \mbox{[}0 -\/ 4095\mbox{]} the \mbox{\hyperlink{class_potentiometer}{Potentiometer}} should deliver during operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_potentiometer_a30f80d25ee65da9303dc043355019f1e}\label{class_potentiometer_a30f80d25ee65da9303dc043355019f1e}} 
+\index{Potentiometer@{Potentiometer}!````~Potentiometer@{$\sim$Potentiometer}}
+\index{````~Potentiometer@{$\sim$Potentiometer}!Potentiometer@{Potentiometer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Potentiometer()}{~Potentiometer()}}
+{\footnotesize\ttfamily Potentiometer\+::$\sim$\+Potentiometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_potentiometer}{Potentiometer}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_potentiometer_a644dd231103e50a233af034a80476253}\label{class_potentiometer_a644dd231103e50a233af034a80476253}} 
+\index{Potentiometer@{Potentiometer}!getMaxVoltageLevel@{getMaxVoltageLevel}}
+\index{getMaxVoltageLevel@{getMaxVoltageLevel}!Potentiometer@{Potentiometer}}
+\doxysubsubsection{\texorpdfstring{getMaxVoltageLevel()}{getMaxVoltageLevel()}}
+{\footnotesize\ttfamily uint16\+\_\+t Potentiometer\+::get\+Max\+Voltage\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the maximal safe voltage of the \mbox{\hyperlink{class_potentiometer}{Potentiometer}}. 
+
+\begin{DoxyReturn}{Returns}
+float -\/ the maximal voltage in millivolt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_potentiometer_afc1082bf402babc4f6b720b4b59e356d}\label{class_potentiometer_afc1082bf402babc4f6b720b4b59e356d}} 
+\index{Potentiometer@{Potentiometer}!getMinVoltageLevel@{getMinVoltageLevel}}
+\index{getMinVoltageLevel@{getMinVoltageLevel}!Potentiometer@{Potentiometer}}
+\doxysubsubsection{\texorpdfstring{getMinVoltageLevel()}{getMinVoltageLevel()}}
+{\footnotesize\ttfamily uint16\+\_\+t Potentiometer\+::get\+Min\+Voltage\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the minimal safe voltage of the \mbox{\hyperlink{class_potentiometer}{Potentiometer}}. 
+
+\begin{DoxyReturn}{Returns}
+float -\/ the minimal voltage in millivolt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_potentiometer_a9bab64885ce7b1769ea240cbf22771b4}\label{class_potentiometer_a9bab64885ce7b1769ea240cbf22771b4}} 
+\index{Potentiometer@{Potentiometer}!getVoltage@{getVoltage}}
+\index{getVoltage@{getVoltage}!Potentiometer@{Potentiometer}}
+\doxysubsubsection{\texorpdfstring{getVoltage()}{getVoltage()}}
+{\footnotesize\ttfamily uint16\+\_\+t Potentiometer\+::get\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the voltage at the \mbox{\hyperlink{class_potentiometer}{Potentiometer}}. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t -\/ the current voltage as uint16\+\_\+t. Range 0 -\/ 4095 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{potentiometer_8hpp}{potentiometer.\+hpp}}\item 
+main/src/\mbox{\hyperlink{potentiometer_8cpp}{potentiometer.\+cpp}}\end{DoxyCompactItemize}

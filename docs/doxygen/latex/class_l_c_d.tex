@@ -1,0 +1,149 @@
+\hypertarget{class_l_c_d}{}\doxysection{L\+CD Class Reference}
+\label{class_l_c_d}\index{LCD@{LCD}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}{L\+CD}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_l_c_d_a5ac2667d164486b73b35dce3fd76bd95}{$\sim$\+L\+CD}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_aca055586298ad99585c57411f6135d84}{display\+Image\+Array}} (const unsigned char image\+Array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em The function displays an image array on the \mbox{\hyperlink{class_l_c_d}{L\+CD}} display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_af021ae49c08cf5b673ddbdbf72564da0}{display\+Card\+Presence}} (bool is\+Present, Card\+State state)
+\begin{DoxyCompactList}\small\item\em The function displays the \textquotesingle{}\mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} card is present\textquotesingle{}-\/sign on the L\+C\+D-\/screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_abc6e6573c54f1608ecfab438b484601f}{display\+Voltage}} (uint16\+\_\+t voltage)
+\begin{DoxyCompactList}\small\item\em The function displays a voltage value \mbox{[}0-\/4095\mbox{]} on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_d_a271b1f8a1d1fc25fccf3040e85270b33}{display\+Percentage}} (float percentage)
+\begin{DoxyCompactList}\small\item\em The function displays a percentage value on the display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}\label{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}} 
+\index{LCD@{LCD}!LCD@{LCD}}
+\index{LCD@{LCD}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{LCD()}{LCD()}}
+{\footnotesize\ttfamily L\+C\+D\+::\+L\+CD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_l_c_d}{L\+CD}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_a5ac2667d164486b73b35dce3fd76bd95}\label{class_l_c_d_a5ac2667d164486b73b35dce3fd76bd95}} 
+\index{LCD@{LCD}!````~LCD@{$\sim$LCD}}
+\index{````~LCD@{$\sim$LCD}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{$\sim$LCD()}{~LCD()}}
+{\footnotesize\ttfamily L\+C\+D\+::$\sim$\+L\+CD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_l_c_d}{L\+CD}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_l_c_d_af021ae49c08cf5b673ddbdbf72564da0}\label{class_l_c_d_af021ae49c08cf5b673ddbdbf72564da0}} 
+\index{LCD@{LCD}!displayCardPresence@{displayCardPresence}}
+\index{displayCardPresence@{displayCardPresence}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{displayCardPresence()}{displayCardPresence()}}
+{\footnotesize\ttfamily void L\+C\+D\+::display\+Card\+Presence (\begin{DoxyParamCaption}\item[{bool}]{is\+Present,  }\item[{Card\+State}]{state }\end{DoxyParamCaption})}
+
+
+
+The function displays the \textquotesingle{}\mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} card is present\textquotesingle{}-\/sign on the L\+C\+D-\/screen. 
+
+The color of the sign represents the current card state.
+
+green -\/ identified
+
+red -\/ unknown
+
+blue -\/ empty
+
+The sign is deleted (overpainted) if no card is present.
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Present} & -\/ a bool value, true if \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} card shall be displayed as present \\
+\hline
+{\em state} & -\/ the Card\+State (empty, identified, unknown) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_aca055586298ad99585c57411f6135d84}\label{class_l_c_d_aca055586298ad99585c57411f6135d84}} 
+\index{LCD@{LCD}!displayImageArray@{displayImageArray}}
+\index{displayImageArray@{displayImageArray}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{displayImageArray()}{displayImageArray()}}
+{\footnotesize\ttfamily void L\+C\+D\+::display\+Image\+Array (\begin{DoxyParamCaption}\item[{const unsigned char}]{image\+Array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+The function displays an image array on the \mbox{\hyperlink{class_l_c_d}{L\+CD}} display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Array\mbox{[}$\,$\mbox{]}} & -\/ a c-\/array of const unsigned char that contains the image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_a271b1f8a1d1fc25fccf3040e85270b33}\label{class_l_c_d_a271b1f8a1d1fc25fccf3040e85270b33}} 
+\index{LCD@{LCD}!displayPercentage@{displayPercentage}}
+\index{displayPercentage@{displayPercentage}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{displayPercentage()}{displayPercentage()}}
+{\footnotesize\ttfamily void L\+C\+D\+::display\+Percentage (\begin{DoxyParamCaption}\item[{float}]{percentage }\end{DoxyParamCaption})}
+
+
+
+The function displays a percentage value on the display. 
+
+The value will be displayed with 4 relevant digits.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pecentage} & -\/ a float value representing a percentage value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_l_c_d_abc6e6573c54f1608ecfab438b484601f}\label{class_l_c_d_abc6e6573c54f1608ecfab438b484601f}} 
+\index{LCD@{LCD}!displayVoltage@{displayVoltage}}
+\index{displayVoltage@{displayVoltage}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{displayVoltage()}{displayVoltage()}}
+{\footnotesize\ttfamily void L\+C\+D\+::display\+Voltage (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{voltage }\end{DoxyParamCaption})}
+
+
+
+The function displays a voltage value \mbox{[}0-\/4095\mbox{]} on the display. 
+
+This function is mainly intended for service and setup purposes.
+
+If you really need the function, change the variable \textquotesingle{}service\+Mode\textquotesingle{} to \textquotesingle{}true\textquotesingle{} inside the \mbox{\hyperlink{class_state_machine}{State\+Machine}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em voltage} & -\/ a uint16\+\_\+t value representing a voltage value (0-\/4095) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{lcd_8hpp}{lcd.\+hpp}}\item 
+main/src/\mbox{\hyperlink{lcd_8cpp}{lcd.\+cpp}}\end{DoxyCompactItemize}

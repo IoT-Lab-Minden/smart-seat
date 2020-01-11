@@ -1,0 +1,253 @@
+\hypertarget{class_r_f_i_d}{}\doxysection{R\+F\+ID Class Reference}
+\label{class_r_f_i_d}\index{RFID@{RFID}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_f_i_d_a91e8d4d6abb74ae099f9144d553db6ed}{R\+F\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_f_i_d_ad4a02d9bc493aabd2c630f41ba93cc02}{$\sim$\+R\+F\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_f_i_d_a2d1cc64d1db81d6d7e740dc39de0b87a}{init}} (\mbox{\hyperlink{class_l_c_d}{L\+CD}} $\ast$display)
+\begin{DoxyCompactList}\small\item\em The function initializes the \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_r_f_i_d_a71ec727b01a14ee4fd192fb8983c961e}{detect\+Card}} ()
+\begin{DoxyCompactList}\small\item\em The function detects if a P\+I\+CC is near and readable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_r_f_i_d_a433f5f20df262f93a3dc48d2c75584ee}{write\+Data}} (byte block\+Address, String string\+Data)
+\begin{DoxyCompactList}\small\item\em The function writes a given String into a given block address of a P\+I\+CC. \end{DoxyCompactList}\item 
+std\+::vector$<$ byte $>$ \mbox{\hyperlink{class_r_f_i_d_af22e50443dbe57bde0b1390f5296518c}{read\+Block\+Array}} (byte block\+Address)
+\begin{DoxyCompactList}\small\item\em The function reads out a given block of a P\+I\+CC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_r_f_i_d_aa9cb7690d57234842034bdf2d3c2cd0d}{get\+Card\+Presence}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the presence status of a P\+I\+CC. \end{DoxyCompactList}\item 
+Card\+State \mbox{\hyperlink{class_r_f_i_d_a0b08eb01f7f0a159c301a85c2474c87c}{get\+Card\+State}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the current card\+State of a nearby P\+I\+CC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_f_i_d_aba069e919720610f4fdadc6495aa7a95}{clear\+Targets}} ()
+\begin{DoxyCompactList}\small\item\em The function clears the vector of \mbox{\hyperlink{struct_target}{Target}} s for the current near P\+I\+CC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_f_i_d_a9280d502f8d98904af206a9e3d4e0938}{add\+Target}} (\mbox{\hyperlink{struct_target}{Target}} the\+Target)
+\begin{DoxyCompactList}\small\item\em The function adds a \mbox{\hyperlink{struct_target}{Target}} to the P\+I\+CC\textquotesingle{}s \mbox{\hyperlink{struct_target}{Target}} vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_target}{Target}} $>$ \mbox{\hyperlink{class_r_f_i_d_ada81a6add6247044cbf8a58cad8374e2}{get\+Targets}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{struct_target}{Target}} s that are defined on the current near P\+I\+CC. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_r_f_i_d_ac9216765941a18b447ffad97cc22ca76}{byte\+Vector2\+String}} (std\+::vector$<$ byte $>$ bytes)
+\begin{DoxyCompactList}\small\item\em The function converts a given vector of bytes into a String. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_r_f_i_d_a2ed9143d3d2055ab3400d439ffc88a26}{erase\+Data}} ()
+\begin{DoxyCompactList}\small\item\em The function erases \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}} \mbox{\hyperlink{class_operation}{Operation}} value data from a P\+I\+CC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_f_i_d_a91e8d4d6abb74ae099f9144d553db6ed}\label{class_r_f_i_d_a91e8d4d6abb74ae099f9144d553db6ed}} 
+\index{RFID@{RFID}!RFID@{RFID}}
+\index{RFID@{RFID}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{RFID()}{RFID()}}
+{\footnotesize\ttfamily R\+F\+I\+D\+::\+R\+F\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_ad4a02d9bc493aabd2c630f41ba93cc02}\label{class_r_f_i_d_ad4a02d9bc493aabd2c630f41ba93cc02}} 
+\index{RFID@{RFID}!````~RFID@{$\sim$RFID}}
+\index{````~RFID@{$\sim$RFID}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{$\sim$RFID()}{~RFID()}}
+{\footnotesize\ttfamily R\+F\+I\+D\+::$\sim$\+R\+F\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_f_i_d_a9280d502f8d98904af206a9e3d4e0938}\label{class_r_f_i_d_a9280d502f8d98904af206a9e3d4e0938}} 
+\index{RFID@{RFID}!addTarget@{addTarget}}
+\index{addTarget@{addTarget}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{addTarget()}{addTarget()}}
+{\footnotesize\ttfamily void R\+F\+I\+D\+::add\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_target}{Target}}}]{the\+Target }\end{DoxyParamCaption})}
+
+
+
+The function adds a \mbox{\hyperlink{struct_target}{Target}} to the P\+I\+CC\textquotesingle{}s \mbox{\hyperlink{struct_target}{Target}} vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_target}{Target}}} & -\/ the \mbox{\hyperlink{struct_target}{Target}} to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_ac9216765941a18b447ffad97cc22ca76}\label{class_r_f_i_d_ac9216765941a18b447ffad97cc22ca76}} 
+\index{RFID@{RFID}!byteVector2String@{byteVector2String}}
+\index{byteVector2String@{byteVector2String}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{byteVector2String()}{byteVector2String()}}
+{\footnotesize\ttfamily String R\+F\+I\+D\+::byte\+Vector2\+String (\begin{DoxyParamCaption}\item[{std\+::vector$<$ byte $>$}]{bytes }\end{DoxyParamCaption})}
+
+
+
+The function converts a given vector of bytes into a String. 
+
+The result is a String of the same length as the size of byte vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & -\/ the vector of bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String -\/ the String that represents the line of chars defined by the byte numbers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_aba069e919720610f4fdadc6495aa7a95}\label{class_r_f_i_d_aba069e919720610f4fdadc6495aa7a95}} 
+\index{RFID@{RFID}!clearTargets@{clearTargets}}
+\index{clearTargets@{clearTargets}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{clearTargets()}{clearTargets()}}
+{\footnotesize\ttfamily void R\+F\+I\+D\+::clear\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function clears the vector of \mbox{\hyperlink{struct_target}{Target}} s for the current near P\+I\+CC. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_a71ec727b01a14ee4fd192fb8983c961e}\label{class_r_f_i_d_a71ec727b01a14ee4fd192fb8983c961e}} 
+\index{RFID@{RFID}!detectCard@{detectCard}}
+\index{detectCard@{detectCard}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{detectCard()}{detectCard()}}
+{\footnotesize\ttfamily bool R\+F\+I\+D\+::detect\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function detects if a P\+I\+CC is near and readable. 
+
+The function also determines if the P\+I\+CC is identified, unknown or empty.
+
+\begin{DoxyReturn}{Returns}
+bool -\/ the return value is true if the presence state has changed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_a2ed9143d3d2055ab3400d439ffc88a26}\label{class_r_f_i_d_a2ed9143d3d2055ab3400d439ffc88a26}} 
+\index{RFID@{RFID}!eraseData@{eraseData}}
+\index{eraseData@{eraseData}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{eraseData()}{eraseData()}}
+{\footnotesize\ttfamily bool R\+F\+I\+D\+::erase\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function erases \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}} \mbox{\hyperlink{class_operation}{Operation}} value data from a P\+I\+CC. 
+
+Erasing will only be performed if P\+I\+CC is identified as \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}} P\+I\+CC.
+
+The identify status of the P\+I\+CC keeps untouched.
+
+\begin{DoxyReturn}{Returns}
+bool -\/ the return value is true if the operation succeeded, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_aa9cb7690d57234842034bdf2d3c2cd0d}\label{class_r_f_i_d_aa9cb7690d57234842034bdf2d3c2cd0d}} 
+\index{RFID@{RFID}!getCardPresence@{getCardPresence}}
+\index{getCardPresence@{getCardPresence}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{getCardPresence()}{getCardPresence()}}
+{\footnotesize\ttfamily bool R\+F\+I\+D\+::get\+Card\+Presence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the presence status of a P\+I\+CC. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ the return value is true if the presence state is true, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_a0b08eb01f7f0a159c301a85c2474c87c}\label{class_r_f_i_d_a0b08eb01f7f0a159c301a85c2474c87c}} 
+\index{RFID@{RFID}!getCardState@{getCardState}}
+\index{getCardState@{getCardState}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{getCardState()}{getCardState()}}
+{\footnotesize\ttfamily Card\+State R\+F\+I\+D\+::get\+Card\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the current card\+State of a nearby P\+I\+CC. 
+
+\begin{DoxyReturn}{Returns}
+Card\+State -\/ the return value is an int number representing one state of enum Card\+State\+: 0 -\/ empty 1 -\/ identified 2 -\/ unknown 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_ada81a6add6247044cbf8a58cad8374e2}\label{class_r_f_i_d_ada81a6add6247044cbf8a58cad8374e2}} 
+\index{RFID@{RFID}!getTargets@{getTargets}}
+\index{getTargets@{getTargets}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{getTargets()}{getTargets()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_target}{Target}} $>$ R\+F\+I\+D\+::get\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{struct_target}{Target}} s that are defined on the current near P\+I\+CC. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Target$>$ -\/ the vector containing the \mbox{\hyperlink{struct_target}{Target}} s 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_a2d1cc64d1db81d6d7e740dc39de0b87a}\label{class_r_f_i_d_a2d1cc64d1db81d6d7e740dc39de0b87a}} 
+\index{RFID@{RFID}!init@{init}}
+\index{init@{init}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void R\+F\+I\+D\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_l_c_d}{L\+CD}} $\ast$}]{display }\end{DoxyParamCaption})}
+
+
+
+The function initializes the \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display} & -\/ a pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_l_c_d}{L\+CD}} display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_af22e50443dbe57bde0b1390f5296518c}\label{class_r_f_i_d_af22e50443dbe57bde0b1390f5296518c}} 
+\index{RFID@{RFID}!readBlockArray@{readBlockArray}}
+\index{readBlockArray@{readBlockArray}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{readBlockArray()}{readBlockArray()}}
+{\footnotesize\ttfamily std\+::vector$<$ byte $>$ R\+F\+I\+D\+::read\+Block\+Array (\begin{DoxyParamCaption}\item[{byte}]{block\+Address }\end{DoxyParamCaption})}
+
+
+
+The function reads out a given block of a P\+I\+CC. 
+
+The result is a vector of 16 bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em block\+Address} & -\/ the byte number of the block that shall be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$byte$>$ -\/ the returned vector represents the read data from the P\+I\+CC. If the read operation failed, the vector contains 16 times byte 255. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_r_f_i_d_a433f5f20df262f93a3dc48d2c75584ee}\label{class_r_f_i_d_a433f5f20df262f93a3dc48d2c75584ee}} 
+\index{RFID@{RFID}!writeData@{writeData}}
+\index{writeData@{writeData}!RFID@{RFID}}
+\doxysubsubsection{\texorpdfstring{writeData()}{writeData()}}
+{\footnotesize\ttfamily bool R\+F\+I\+D\+::write\+Data (\begin{DoxyParamCaption}\item[{byte}]{block\+Address,  }\item[{String}]{string\+Data }\end{DoxyParamCaption})}
+
+
+
+The function writes a given String into a given block address of a P\+I\+CC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block\+Address} & -\/ a byte number of the P\+I\+C\+C-\/block where the data shall be written \\
+\hline
+{\em string\+Data} & -\/ a String that contains the data to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ the return value is true if the operation succeeded, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{rfid_8hpp}{rfid.\+hpp}}\item 
+main/src/\mbox{\hyperlink{rfid_8cpp}{rfid.\+cpp}}\end{DoxyCompactItemize}

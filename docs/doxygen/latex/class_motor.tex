@@ -1,0 +1,165 @@
+\hypertarget{class_motor}{}\doxysection{Motor Class Reference}
+\label{class_motor}\index{Motor@{Motor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_motor_aba14d043a59d04a1805d84482a2e1871}{Motor}} (uint8\+\_\+t gpio01, uint8\+\_\+t gpio02, \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$speeder)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_motor_a2e57c7b2681efea1d3b7f253ee88ecd4}{$\sim$\+Motor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_motor_ab8f93170d1d2a79a6095ccd9bb223e73}{get\+Pin01}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the number of the first G\+P\+IO pin that drives the \mbox{\hyperlink{class_motor}{Motor}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_motor_a741ef5e8e06df62eab487162f451064e}{get\+Pin02}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the number of the second G\+P\+IO pin that drives the \mbox{\hyperlink{class_motor}{Motor}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ \mbox{\hyperlink{class_motor_a2ec9bfce624229bfa4a9af320719becb}{get\+Speeder}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the assigned \mbox{\hyperlink{class_speeder}{Speeder}} of the \mbox{\hyperlink{class_motor}{Motor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_ac33814c8814d6b576531149ee945516d}{init}} ()
+\begin{DoxyCompactList}\small\item\em The function inits the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins as output and sets the defaults. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_a0eda71db8d0e929ccc393f4d9721b326}{move\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins to let move the \mbox{\hyperlink{class_motor}{Motor}} forward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_ad7b3df124d2487275a2c62b063aad2ec}{move\+Backward}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins to let move the \mbox{\hyperlink{class_motor}{Motor}} backward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_a015fd5308d4d27e5dcf7f9ea3d5c03f6}{stop}} ()
+\begin{DoxyCompactList}\small\item\em The function sets the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins to stop the \mbox{\hyperlink{class_motor}{Motor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_motor_aba14d043a59d04a1805d84482a2e1871}\label{class_motor_aba14d043a59d04a1805d84482a2e1871}} 
+\index{Motor@{Motor}!Motor@{Motor}}
+\index{Motor@{Motor}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Motor()}{Motor()}}
+{\footnotesize\ttfamily Motor\+::\+Motor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio01,  }\item[{uint8\+\_\+t}]{gpio02,  }\item[{\mbox{\hyperlink{class_speeder}{Speeder}} $\ast$}]{speeder }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_motor}{Motor}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio01} & -\/ a uint8\+\_\+t value that represents the first microcontroller\textquotesingle{}s G\+P\+IO number that drives the \mbox{\hyperlink{class_motor}{Motor}} \\
+\hline
+{\em gpio02} & -\/ a uint8\+\_\+t value that represents the second microcontroller\textquotesingle{}s G\+P\+IO number that drives the \mbox{\hyperlink{class_motor}{Motor}} \\
+\hline
+{\em speeder} & -\/ a pointer to the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s assigned \mbox{\hyperlink{class_speeder}{Speeder}} class instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motor_a2e57c7b2681efea1d3b7f253ee88ecd4}\label{class_motor_a2e57c7b2681efea1d3b7f253ee88ecd4}} 
+\index{Motor@{Motor}!````~Motor@{$\sim$Motor}}
+\index{````~Motor@{$\sim$Motor}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Motor()}{~Motor()}}
+{\footnotesize\ttfamily Motor\+::$\sim$\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_motor}{Motor}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_motor_ab8f93170d1d2a79a6095ccd9bb223e73}\label{class_motor_ab8f93170d1d2a79a6095ccd9bb223e73}} 
+\index{Motor@{Motor}!getPin01@{getPin01}}
+\index{getPin01@{getPin01}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{getPin01()}{getPin01()}}
+{\footnotesize\ttfamily uint8\+\_\+t Motor\+::get\+Pin01 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the number of the first G\+P\+IO pin that drives the \mbox{\hyperlink{class_motor}{Motor}}. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t -\/ the G\+P\+I\+O-\/number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motor_a741ef5e8e06df62eab487162f451064e}\label{class_motor_a741ef5e8e06df62eab487162f451064e}} 
+\index{Motor@{Motor}!getPin02@{getPin02}}
+\index{getPin02@{getPin02}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{getPin02()}{getPin02()}}
+{\footnotesize\ttfamily uint8\+\_\+t Motor\+::get\+Pin02 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the number of the second G\+P\+IO pin that drives the \mbox{\hyperlink{class_motor}{Motor}}. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t -\/ the G\+P\+I\+O-\/number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motor_a2ec9bfce624229bfa4a9af320719becb}\label{class_motor_a2ec9bfce624229bfa4a9af320719becb}} 
+\index{Motor@{Motor}!getSpeeder@{getSpeeder}}
+\index{getSpeeder@{getSpeeder}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{getSpeeder()}{getSpeeder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ Motor\+::get\+Speeder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the assigned \mbox{\hyperlink{class_speeder}{Speeder}} of the \mbox{\hyperlink{class_motor}{Motor}}. 
+
+\begin{DoxyReturn}{Returns}
+Speeder$\ast$ -\/ a pointer to the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s assigned \mbox{\hyperlink{class_speeder}{Speeder}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motor_ac33814c8814d6b576531149ee945516d}\label{class_motor_ac33814c8814d6b576531149ee945516d}} 
+\index{Motor@{Motor}!init@{init}}
+\index{init@{init}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Motor\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function inits the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins as output and sets the defaults. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motor_ad7b3df124d2487275a2c62b063aad2ec}\label{class_motor_ad7b3df124d2487275a2c62b063aad2ec}} 
+\index{Motor@{Motor}!moveBackward@{moveBackward}}
+\index{moveBackward@{moveBackward}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{moveBackward()}{moveBackward()}}
+{\footnotesize\ttfamily void Motor\+::move\+Backward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins to let move the \mbox{\hyperlink{class_motor}{Motor}} backward. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motor_a0eda71db8d0e929ccc393f4d9721b326}\label{class_motor_a0eda71db8d0e929ccc393f4d9721b326}} 
+\index{Motor@{Motor}!moveForward@{moveForward}}
+\index{moveForward@{moveForward}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{moveForward()}{moveForward()}}
+{\footnotesize\ttfamily void Motor\+::move\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins to let move the \mbox{\hyperlink{class_motor}{Motor}} forward. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motor_a015fd5308d4d27e5dcf7f9ea3d5c03f6}\label{class_motor_a015fd5308d4d27e5dcf7f9ea3d5c03f6}} 
+\index{Motor@{Motor}!stop@{stop}}
+\index{stop@{stop}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Motor\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function sets the \mbox{\hyperlink{class_motor}{Motor}}\textquotesingle{}s pins to stop the \mbox{\hyperlink{class_motor}{Motor}}. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{motor_8hpp}{motor.\+hpp}}\item 
+main/src/\mbox{\hyperlink{motor_8cpp}{motor.\+cpp}}\end{DoxyCompactItemize}

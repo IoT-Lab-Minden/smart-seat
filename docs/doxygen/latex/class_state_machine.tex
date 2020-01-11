@@ -1,0 +1,158 @@
+\hypertarget{class_state_machine}{}\doxysection{State\+Machine Class Reference}
+\label{class_state_machine}\index{StateMachine@{StateMachine}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_machine_a2fb07002510ea9141019559750acfab8}{State\+Machine}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_state_machine_a93d66cb2a89b186789d655a08b02674e}{$\sim$\+State\+Machine}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a6b2e2da20afa8bccfef942b8c1a57271}{init}} (\mbox{\hyperlink{class_l_c_d}{L\+CD}} $\ast$display, \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} $\ast$rfid, std\+::vector$<$ \mbox{\hyperlink{class_operation}{Operation}} $\ast$ $>$ ops, std\+::vector$<$ \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ $>$ speeds)
+\begin{DoxyCompactList}\small\item\em The function initializes the \mbox{\hyperlink{class_state_machine}{State\+Machine}} Object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a2bdc8817ea8bf08a1ec6b3a17ba00ad0}{event\+ButtonA}} ()
+\begin{DoxyCompactList}\small\item\em The function reacts on the event\+: \textquotesingle{}Button A is pressed\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a37d8bb79a81cb88f19d40e4b824e8806}{event\+ButtonB}} ()
+\begin{DoxyCompactList}\small\item\em The function reacts on the event\+: \textquotesingle{}Button B is pressed\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_ade1dd759f56116f5f967bc535f8f3265}{event\+ButtonC}} ()
+\begin{DoxyCompactList}\small\item\em The function reacts on the event\+: \textquotesingle{}Button C is pressed\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a5e456c46a5ebfd0b155dcc57b144c8f4}{event\+Rfid}} ()
+\begin{DoxyCompactList}\small\item\em The function reacts on the events\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_a7cf23f24ed78d774b978ac7263d9bdd7}{write\+Data\+To\+P\+I\+CC}} (float current\+Position)
+\begin{DoxyCompactList}\small\item\em The function writes new operation data to the P\+I\+CC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_state_machine_a2fb07002510ea9141019559750acfab8}\label{class_state_machine_a2fb07002510ea9141019559750acfab8}} 
+\index{StateMachine@{StateMachine}!StateMachine@{StateMachine}}
+\index{StateMachine@{StateMachine}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{StateMachine()}{StateMachine()}}
+{\footnotesize\ttfamily State\+Machine\+::\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_state_machine}{State\+Machine}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_state_machine_a93d66cb2a89b186789d655a08b02674e}\label{class_state_machine_a93d66cb2a89b186789d655a08b02674e}} 
+\index{StateMachine@{StateMachine}!````~StateMachine@{$\sim$StateMachine}}
+\index{````~StateMachine@{$\sim$StateMachine}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{$\sim$StateMachine()}{~StateMachine()}}
+{\footnotesize\ttfamily State\+Machine\+::$\sim$\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_state_machine}{State\+Machine}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_state_machine_a2bdc8817ea8bf08a1ec6b3a17ba00ad0}\label{class_state_machine_a2bdc8817ea8bf08a1ec6b3a17ba00ad0}} 
+\index{StateMachine@{StateMachine}!eventButtonA@{eventButtonA}}
+\index{eventButtonA@{eventButtonA}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{eventButtonA()}{eventButtonA()}}
+{\footnotesize\ttfamily void State\+Machine\+::event\+ButtonA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function reacts on the event\+: \textquotesingle{}Button A is pressed\textquotesingle{}. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_state_machine_a37d8bb79a81cb88f19d40e4b824e8806}\label{class_state_machine_a37d8bb79a81cb88f19d40e4b824e8806}} 
+\index{StateMachine@{StateMachine}!eventButtonB@{eventButtonB}}
+\index{eventButtonB@{eventButtonB}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{eventButtonB()}{eventButtonB()}}
+{\footnotesize\ttfamily void State\+Machine\+::event\+ButtonB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function reacts on the event\+: \textquotesingle{}Button B is pressed\textquotesingle{}. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_state_machine_ade1dd759f56116f5f967bc535f8f3265}\label{class_state_machine_ade1dd759f56116f5f967bc535f8f3265}} 
+\index{StateMachine@{StateMachine}!eventButtonC@{eventButtonC}}
+\index{eventButtonC@{eventButtonC}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{eventButtonC()}{eventButtonC()}}
+{\footnotesize\ttfamily void State\+Machine\+::event\+ButtonC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function reacts on the event\+: \textquotesingle{}Button C is pressed\textquotesingle{}. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_state_machine_a5e456c46a5ebfd0b155dcc57b144c8f4}\label{class_state_machine_a5e456c46a5ebfd0b155dcc57b144c8f4}} 
+\index{StateMachine@{StateMachine}!eventRfid@{eventRfid}}
+\index{eventRfid@{eventRfid}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{eventRfid()}{eventRfid()}}
+{\footnotesize\ttfamily void State\+Machine\+::event\+Rfid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function reacts on the events\+: 
+
+
+\begin{DoxyItemize}
+\item a new P\+I\+CC has been recognized
+\item a P\+I\+CC is not been recognized any more
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_state_machine_a6b2e2da20afa8bccfef942b8c1a57271}\label{class_state_machine_a6b2e2da20afa8bccfef942b8c1a57271}} 
+\index{StateMachine@{StateMachine}!init@{init}}
+\index{init@{init}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void State\+Machine\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_l_c_d}{L\+CD}} $\ast$}]{display,  }\item[{\mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} $\ast$}]{rfid,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_operation}{Operation}} $\ast$ $>$}]{ops,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ $>$}]{speeds }\end{DoxyParamCaption})}
+
+
+
+The function initializes the \mbox{\hyperlink{class_state_machine}{State\+Machine}} Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display} & -\/ a pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_l_c_d}{L\+CD}} display \\
+\hline
+{\em rfid} & -\/ a pointer to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_r_f_i_d}{R\+F\+ID}} device \\
+\hline
+{\em std\+::vector$<$\+Operation$\ast$$>$} & -\/ a vector of pointers to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s executable \mbox{\hyperlink{class_operation}{Operation}} s \\
+\hline
+{\em std\+::vector$<$\+Speeder$\ast$$>$} & -\/ a vector of pointers to the \mbox{\hyperlink{class_smart_seat}{Smart\+Seat}}\textquotesingle{}s \mbox{\hyperlink{class_speeder}{Speeder}} instances \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_state_machine_a7cf23f24ed78d774b978ac7263d9bdd7}\label{class_state_machine_a7cf23f24ed78d774b978ac7263d9bdd7}} 
+\index{StateMachine@{StateMachine}!writeDataToPICC@{writeDataToPICC}}
+\index{writeDataToPICC@{writeDataToPICC}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{writeDataToPICC()}{writeDataToPICC()}}
+{\footnotesize\ttfamily void State\+Machine\+::write\+Data\+To\+P\+I\+CC (\begin{DoxyParamCaption}\item[{float}]{current\+Position }\end{DoxyParamCaption})}
+
+
+
+The function writes new operation data to the P\+I\+CC. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{statemachine_8hpp}{statemachine.\+hpp}}\item 
+main/src/\mbox{\hyperlink{statemachine_8cpp}{statemachine.\+cpp}}\end{DoxyCompactItemize}

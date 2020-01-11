@@ -1,0 +1,133 @@
+\hypertarget{class_light}{}\doxysection{Light Class Reference}
+\label{class_light}\index{Light@{Light}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_a64ef616b5aef1ed097b6be9450dae3cf}{Light}} (uint8\+\_\+t gpio01, \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$speeder)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_light_ad0e59fad13bb6cfadc25b2c477e9ddc7}{$\sim$\+Light}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_light_aef1b49d811006627035694255de775bf}{get\+Pin01}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the number of the G\+P\+I\+O-\/pin that drives the \mbox{\hyperlink{class_light}{Light}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ \mbox{\hyperlink{class_light_aea36d56f26d920c5ec9340c6a790f79a}{get\+Speeder}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_speeder}{Speeder}} of the light. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a55223800cebd711b1f8e8b66c1472910}{init}} ()
+\begin{DoxyCompactList}\small\item\em The function inits the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s G\+P\+I\+O-\/pin as output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a79613afb0cf7788c131091afccb46aef}{turn\+On}} ()
+\begin{DoxyCompactList}\small\item\em The function turns the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s G\+P\+I\+O-\/pin to on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a0e8620e8e476247a4d2936c98a1a494f}{turn\+Out}} ()
+\begin{DoxyCompactList}\small\item\em The function turns the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s G\+P\+I\+O-\/pin to out. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_a64ef616b5aef1ed097b6be9450dae3cf}\label{class_light_a64ef616b5aef1ed097b6be9450dae3cf}} 
+\index{Light@{Light}!Light@{Light}}
+\index{Light@{Light}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Light()}{Light()}}
+{\footnotesize\ttfamily Light\+::\+Light (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio01,  }\item[{\mbox{\hyperlink{class_speeder}{Speeder}} $\ast$}]{speeder }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_light}{Light}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio01} & -\/ the G\+P\+I\+O-\/\+Pin that drives the \mbox{\hyperlink{class_light}{Light}} \\
+\hline
+{\em speeder} & -\/ the \mbox{\hyperlink{class_speeder}{Speeder}} class instance for the P\+WM control of the light \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_ad0e59fad13bb6cfadc25b2c477e9ddc7}\label{class_light_ad0e59fad13bb6cfadc25b2c477e9ddc7}} 
+\index{Light@{Light}!````~Light@{$\sim$Light}}
+\index{````~Light@{$\sim$Light}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{$\sim$Light()}{~Light()}}
+{\footnotesize\ttfamily Light\+::$\sim$\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_light}{Light}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_aef1b49d811006627035694255de775bf}\label{class_light_aef1b49d811006627035694255de775bf}} 
+\index{Light@{Light}!getPin01@{getPin01}}
+\index{getPin01@{getPin01}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{getPin01()}{getPin01()}}
+{\footnotesize\ttfamily uint8\+\_\+t Light\+::get\+Pin01 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the number of the G\+P\+I\+O-\/pin that drives the \mbox{\hyperlink{class_light}{Light}}. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t -\/ the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s G\+P\+IO pin number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_aea36d56f26d920c5ec9340c6a790f79a}\label{class_light_aea36d56f26d920c5ec9340c6a790f79a}} 
+\index{Light@{Light}!getSpeeder@{getSpeeder}}
+\index{getSpeeder@{getSpeeder}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{getSpeeder()}{getSpeeder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_speeder}{Speeder}} $\ast$ Light\+::get\+Speeder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_speeder}{Speeder}} of the light. 
+
+\begin{DoxyReturn}{Returns}
+Speeder$\ast$ -\/ a pointer to the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s assigned \mbox{\hyperlink{class_speeder}{Speeder}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_a55223800cebd711b1f8e8b66c1472910}\label{class_light_a55223800cebd711b1f8e8b66c1472910}} 
+\index{Light@{Light}!init@{init}}
+\index{init@{init}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Light\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function inits the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s G\+P\+I\+O-\/pin as output. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_a79613afb0cf7788c131091afccb46aef}\label{class_light_a79613afb0cf7788c131091afccb46aef}} 
+\index{Light@{Light}!turnOn@{turnOn}}
+\index{turnOn@{turnOn}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{turnOn()}{turnOn()}}
+{\footnotesize\ttfamily void Light\+::turn\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function turns the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s G\+P\+I\+O-\/pin to on. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_light_a0e8620e8e476247a4d2936c98a1a494f}\label{class_light_a0e8620e8e476247a4d2936c98a1a494f}} 
+\index{Light@{Light}!turnOut@{turnOut}}
+\index{turnOut@{turnOut}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{turnOut()}{turnOut()}}
+{\footnotesize\ttfamily void Light\+::turn\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function turns the \mbox{\hyperlink{class_light}{Light}}\textquotesingle{}s G\+P\+I\+O-\/pin to out. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{light_8hpp}{light.\+hpp}}\item 
+main/src/\mbox{\hyperlink{light_8cpp}{light.\+cpp}}\end{DoxyCompactItemize}

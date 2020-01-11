@@ -1,0 +1,267 @@
+\hypertarget{class_operation}{}\doxysection{Operation Class Reference}
+\label{class_operation}\index{Operation@{Operation}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_operation_af5cdea444e6302bad8f876842a5356c5}{Operation}} (String name, const unsigned char image\+Array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation_a4e8f51da0e02e34b576c18c4cb9b91d1}{Operation}} (String name, const unsigned char image\+Array\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{class_servo}{Servo}} $\ast$servo)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation_afdf29034c2d27240165f3b56042d237b}{Operation}} (String name, const unsigned char image\+Array\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{class_light}{Light}} $\ast$light)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation_a66f723cbbeebe4ff0b24a1e28bccf166}{Operation}} (String name, const unsigned char image\+Array\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{class_heater}{Heater}} $\ast$heater)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation_ae22810438d50bcae963de327a2357722}{Operation}} (String name, const unsigned char image\+Array\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{class_motor}{Motor}} $\ast$motor)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation_a14089623bd8a73e73375353c3d8a4b6e}{$\sim$\+Operation}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_operation_a66df2fa46e6526a96308c4ffd940e53a}{get\+Operation\+Name}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s name. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_operation_a7937b5e25dfd5d6c29bf7b453942766d}{get\+Operation\+Type}} ()
+\begin{DoxyCompactList}\small\item\em The funtion gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s type. \end{DoxyCompactList}\item 
+const unsigned char $\ast$ \mbox{\hyperlink{class_operation_a38ec06ed73599fd9ec40969eb6f3f716}{get\+Image\+Array}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s image array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_servo}{Servo}} $\ast$ \mbox{\hyperlink{class_operation_a5336a8123201c6ded55f809ae1dd17bb}{get\+Operation\+Servo}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_servo}{Servo}} unit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_light}{Light}} $\ast$ \mbox{\hyperlink{class_operation_a9977a035eb102d1c6a2ae679439bba7f}{get\+Operation\+Light}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_light}{Light}} unit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_heater}{Heater}} $\ast$ \mbox{\hyperlink{class_operation_a488276f354085aa6971d780123d2a9b8}{get\+Operation\+Heater}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_heater}{Heater}} unit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_motor}{Motor}} $\ast$ \mbox{\hyperlink{class_operation_adc1ec67de79d84ae61c31bc402ab512d}{get\+Operation\+Motor}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_operation_af5cdea444e6302bad8f876842a5356c5}\label{class_operation_af5cdea444e6302bad8f876842a5356c5}} 
+\index{Operation@{Operation}!Operation@{Operation}}
+\index{Operation@{Operation}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{Operation()}{Operation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Operation\+::\+Operation (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{const unsigned char}]{image\+Array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_operation}{Operation}} object of the intern \textquotesingle{}wait\textquotesingle{}-\/type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ a String representing the the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s name The first 16 characters of the name have to be unique to distinct the \mbox{\hyperlink{class_operation}{Operation}} from other ones. \\
+\hline
+{\em image\+Array\mbox{[}$\,$\mbox{]}} & -\/ an array of const unsigned chars describing the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s associated image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a4e8f51da0e02e34b576c18c4cb9b91d1}\label{class_operation_a4e8f51da0e02e34b576c18c4cb9b91d1}} 
+\index{Operation@{Operation}!Operation@{Operation}}
+\index{Operation@{Operation}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{Operation()}{Operation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Operation\+::\+Operation (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{const unsigned char}]{image\+Array\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{class_servo}{Servo}} $\ast$}]{servo }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_operation}{Operation}} object of the intern \textquotesingle{}servo\textquotesingle{}-\/type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ a String representing the the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s name The first 16 characters of the name have to be unique to distinct the \mbox{\hyperlink{class_operation}{Operation}} from other ones. \\
+\hline
+{\em image\+Array\mbox{[}$\,$\mbox{]}} & -\/ an array of const unsigned chars describing the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s associated image \\
+\hline
+{\em servo} & -\/ a pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_servo}{Servo}} class instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_afdf29034c2d27240165f3b56042d237b}\label{class_operation_afdf29034c2d27240165f3b56042d237b}} 
+\index{Operation@{Operation}!Operation@{Operation}}
+\index{Operation@{Operation}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{Operation()}{Operation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Operation\+::\+Operation (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{const unsigned char}]{image\+Array\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{class_light}{Light}} $\ast$}]{light }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_operation}{Operation}} object of the intern \textquotesingle{}light\textquotesingle{}-\/type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ a String representing the the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s name The first 16 characters of the name have to be unique to distinct the \mbox{\hyperlink{class_operation}{Operation}} from other ones. \\
+\hline
+{\em image\+Array\mbox{[}$\,$\mbox{]}} & -\/ an array of const unsigned chars describing the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s associated image \\
+\hline
+{\em light} & -\/ a pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_light}{Light}} class instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a66f723cbbeebe4ff0b24a1e28bccf166}\label{class_operation_a66f723cbbeebe4ff0b24a1e28bccf166}} 
+\index{Operation@{Operation}!Operation@{Operation}}
+\index{Operation@{Operation}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{Operation()}{Operation()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Operation\+::\+Operation (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{const unsigned char}]{image\+Array\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{class_heater}{Heater}} $\ast$}]{heater }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates an \mbox{\hyperlink{class_operation}{Operation}} object of the intern \textquotesingle{}heater\textquotesingle{}-\/type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ a String representing the the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s name The first 16 characters of the name have to be unique to distinct the \mbox{\hyperlink{class_operation}{Operation}} from other ones. \\
+\hline
+{\em image\+Array\mbox{[}$\,$\mbox{]}} & -\/ an array of const unsigned chars describing the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s associated image \\
+\hline
+{\em heater} & -\/ a pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_heater}{Heater}} class instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_ae22810438d50bcae963de327a2357722}\label{class_operation_ae22810438d50bcae963de327a2357722}} 
+\index{Operation@{Operation}!Operation@{Operation}}
+\index{Operation@{Operation}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{Operation()}{Operation()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Operation\+::\+Operation (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{const unsigned char}]{image\+Array\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{class_motor}{Motor}} $\ast$}]{motor }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates an \mbox{\hyperlink{class_operation}{Operation}} object of the intern \textquotesingle{}motor\textquotesingle{}-\/type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ a String representing the the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s name The first 16 characters of the name have to be unique to distinct the \mbox{\hyperlink{class_operation}{Operation}} from other ones. \\
+\hline
+{\em image\+Array\mbox{[}$\,$\mbox{]}} & -\/ an array of const unsigned chars describing the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s associated image \\
+\hline
+{\em motor} & -\/ a pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_motor}{Motor}} class instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a14089623bd8a73e73375353c3d8a4b6e}\label{class_operation_a14089623bd8a73e73375353c3d8a4b6e}} 
+\index{Operation@{Operation}!````~Operation@{$\sim$Operation}}
+\index{````~Operation@{$\sim$Operation}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{$\sim$Operation()}{~Operation()}}
+{\footnotesize\ttfamily Operation\+::$\sim$\+Operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys an \mbox{\hyperlink{class_operation}{Operation}} object
+
+\begin{DoxyReturn}{Returns}
+no return 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_operation_a38ec06ed73599fd9ec40969eb6f3f716}\label{class_operation_a38ec06ed73599fd9ec40969eb6f3f716}} 
+\index{Operation@{Operation}!getImageArray@{getImageArray}}
+\index{getImageArray@{getImageArray}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getImageArray()}{getImageArray()}}
+{\footnotesize\ttfamily const unsigned char $\ast$ Operation\+::get\+Image\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s image array. 
+
+\begin{DoxyReturn}{Returns}
+const unsigned char$\ast$ -\/ a pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s associated image array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a488276f354085aa6971d780123d2a9b8}\label{class_operation_a488276f354085aa6971d780123d2a9b8}} 
+\index{Operation@{Operation}!getOperationHeater@{getOperationHeater}}
+\index{getOperationHeater@{getOperationHeater}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getOperationHeater()}{getOperationHeater()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_heater}{Heater}} $\ast$ Operation\+::get\+Operation\+Heater (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_heater}{Heater}} unit. 
+
+\begin{DoxyReturn}{Returns}
+Heater$\ast$ -\/ the pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_heater}{Heater}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a9977a035eb102d1c6a2ae679439bba7f}\label{class_operation_a9977a035eb102d1c6a2ae679439bba7f}} 
+\index{Operation@{Operation}!getOperationLight@{getOperationLight}}
+\index{getOperationLight@{getOperationLight}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getOperationLight()}{getOperationLight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_light}{Light}} $\ast$ Operation\+::get\+Operation\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_light}{Light}} unit. 
+
+\begin{DoxyReturn}{Returns}
+Light$\ast$ -\/ the pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_light}{Light}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_adc1ec67de79d84ae61c31bc402ab512d}\label{class_operation_adc1ec67de79d84ae61c31bc402ab512d}} 
+\index{Operation@{Operation}!getOperationMotor@{getOperationMotor}}
+\index{getOperationMotor@{getOperationMotor}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getOperationMotor()}{getOperationMotor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_motor}{Motor}} $\ast$ Operation\+::get\+Operation\+Motor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_motor}{Motor}} unit. 
+
+\begin{DoxyReturn}{Returns}
+Motor$\ast$ -\/ the pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_motor}{Motor}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a66df2fa46e6526a96308c4ffd940e53a}\label{class_operation_a66df2fa46e6526a96308c4ffd940e53a}} 
+\index{Operation@{Operation}!getOperationName@{getOperationName}}
+\index{getOperationName@{getOperationName}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getOperationName()}{getOperationName()}}
+{\footnotesize\ttfamily String Operation\+::get\+Operation\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+String -\/ the name of the \mbox{\hyperlink{class_operation}{Operation}} as String 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a5336a8123201c6ded55f809ae1dd17bb}\label{class_operation_a5336a8123201c6ded55f809ae1dd17bb}} 
+\index{Operation@{Operation}!getOperationServo@{getOperationServo}}
+\index{getOperationServo@{getOperationServo}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getOperationServo()}{getOperationServo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_servo}{Servo}} $\ast$ Operation\+::get\+Operation\+Servo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s \mbox{\hyperlink{class_servo}{Servo}} unit. 
+
+\begin{DoxyReturn}{Returns}
+Servo$\ast$ -\/ the pointer to the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s assigned \mbox{\hyperlink{class_servo}{Servo}} class instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a7937b5e25dfd5d6c29bf7b453942766d}\label{class_operation_a7937b5e25dfd5d6c29bf7b453942766d}} 
+\index{Operation@{Operation}!getOperationType@{getOperationType}}
+\index{getOperationType@{getOperationType}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getOperationType()}{getOperationType()}}
+{\footnotesize\ttfamily String Operation\+::get\+Operation\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The funtion gets the \mbox{\hyperlink{class_operation}{Operation}}\textquotesingle{}s type. 
+
+\begin{DoxyReturn}{Returns}
+String -\/ the type of the \mbox{\hyperlink{class_operation}{Operation}} as String 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{operation_8hpp}{operation.\+hpp}}\item 
+main/src/\mbox{\hyperlink{operation_8cpp}{operation.\+cpp}}\end{DoxyCompactItemize}

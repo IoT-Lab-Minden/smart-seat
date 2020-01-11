@@ -1,0 +1,131 @@
+\hypertarget{class_speeder}{}\doxysection{Speeder Class Reference}
+\label{class_speeder}\index{Speeder@{Speeder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_speeder_a90d29ce1e1a8664aa4f15f71635d19cb}{Speeder}} (uint8\+\_\+t gpio, uint16\+\_\+t freq, uint8\+\_\+t channel, uint8\+\_\+t res, uint8\+\_\+t min\+Cycle, uint8\+\_\+t max\+Cycle)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_speeder_ac063201a4e762882c7798618d561cc9a}{$\sim$\+Speeder}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_speeder_af0c32a6a6fa33303aef42b8c999be814}{get\+Pin}} ()
+\begin{DoxyCompactList}\small\item\em The function gets the G\+P\+IO pin of the \mbox{\hyperlink{class_speeder}{Speeder}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speeder_a1202cc412e0676e9de748ff390fc1031}{turn\+Off}} ()
+\begin{DoxyCompactList}\small\item\em The function turns off the \mbox{\hyperlink{class_speeder}{Speeder}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speeder_af36271decc548b1c0cc7f29cdc431e1e}{turn\+On}} (float speed)
+\begin{DoxyCompactList}\small\item\em The function turns on the \mbox{\hyperlink{class_speeder}{Speeder}} at given percentage speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speeder_ae15a87124c52d43e82e102dd3a7b314f}{init}} ()
+\begin{DoxyCompactList}\small\item\em The function initializes the \mbox{\hyperlink{class_speeder}{Speeder}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_speeder_a90d29ce1e1a8664aa4f15f71635d19cb}\label{class_speeder_a90d29ce1e1a8664aa4f15f71635d19cb}} 
+\index{Speeder@{Speeder}!Speeder@{Speeder}}
+\index{Speeder@{Speeder}!Speeder@{Speeder}}
+\doxysubsubsection{\texorpdfstring{Speeder()}{Speeder()}}
+{\footnotesize\ttfamily Speeder\+::\+Speeder (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio,  }\item[{uint16\+\_\+t}]{freq,  }\item[{uint8\+\_\+t}]{channel,  }\item[{uint8\+\_\+t}]{res,  }\item[{uint8\+\_\+t}]{min\+Cycle,  }\item[{uint8\+\_\+t}]{max\+Cycle }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The function creates a \mbox{\hyperlink{class_speeder}{Speeder}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpio} & -\/ a uint8\+\_\+t value that represents the microcontroller\textquotesingle{}s G\+P\+IO number for the P\+WM output \\
+\hline
+{\em freq} & -\/ a uint16\+\_\+t value that defines the operating frequency of the P\+WM channel \\
+\hline
+{\em channel} & -\/ a uint8\+\_\+t value that defines the channel number for the P\+WM output \\
+\hline
+{\em res} & -\/ a uint8\+\_\+t value that defines the sample resolution for the P\+WM output \\
+\hline
+{\em min\+Cycle} & -\/ a uint8\+\_\+t value that defines the minimal numbers of duty cycles \mbox{[}0-\/100\mbox{]} for this \mbox{\hyperlink{class_speeder}{Speeder}} \\
+\hline
+{\em max\+Cycle} & -\/ a uint8\+\_\+t value that defines the maximal numbers of duty cycles \mbox{[}0-\/100\mbox{]} for this \mbox{\hyperlink{class_speeder}{Speeder}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_speeder_ac063201a4e762882c7798618d561cc9a}\label{class_speeder_ac063201a4e762882c7798618d561cc9a}} 
+\index{Speeder@{Speeder}!````~Speeder@{$\sim$Speeder}}
+\index{````~Speeder@{$\sim$Speeder}!Speeder@{Speeder}}
+\doxysubsubsection{\texorpdfstring{$\sim$Speeder()}{~Speeder()}}
+{\footnotesize\ttfamily Speeder\+::$\sim$\+Speeder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The function destroys a \mbox{\hyperlink{class_speeder}{Speeder}} object.
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_speeder_af0c32a6a6fa33303aef42b8c999be814}\label{class_speeder_af0c32a6a6fa33303aef42b8c999be814}} 
+\index{Speeder@{Speeder}!getPin@{getPin}}
+\index{getPin@{getPin}!Speeder@{Speeder}}
+\doxysubsubsection{\texorpdfstring{getPin()}{getPin()}}
+{\footnotesize\ttfamily uint8\+\_\+t Speeder\+::get\+Pin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gets the G\+P\+IO pin of the \mbox{\hyperlink{class_speeder}{Speeder}}. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t -\/ the \mbox{\hyperlink{class_speeder}{Speeder}}\textquotesingle{}s assigned G\+P\+IO number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_speeder_ae15a87124c52d43e82e102dd3a7b314f}\label{class_speeder_ae15a87124c52d43e82e102dd3a7b314f}} 
+\index{Speeder@{Speeder}!init@{init}}
+\index{init@{init}!Speeder@{Speeder}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Speeder\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function initializes the \mbox{\hyperlink{class_speeder}{Speeder}} object. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_speeder_a1202cc412e0676e9de748ff390fc1031}\label{class_speeder_a1202cc412e0676e9de748ff390fc1031}} 
+\index{Speeder@{Speeder}!turnOff@{turnOff}}
+\index{turnOff@{turnOff}!Speeder@{Speeder}}
+\doxysubsubsection{\texorpdfstring{turnOff()}{turnOff()}}
+{\footnotesize\ttfamily void Speeder\+::turn\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function turns off the \mbox{\hyperlink{class_speeder}{Speeder}}. 
+
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_speeder_af36271decc548b1c0cc7f29cdc431e1e}\label{class_speeder_af36271decc548b1c0cc7f29cdc431e1e}} 
+\index{Speeder@{Speeder}!turnOn@{turnOn}}
+\index{turnOn@{turnOn}!Speeder@{Speeder}}
+\doxysubsubsection{\texorpdfstring{turnOn()}{turnOn()}}
+{\footnotesize\ttfamily void Speeder\+::turn\+On (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+The function turns on the \mbox{\hyperlink{class_speeder}{Speeder}} at given percentage speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & -\/ percentage speed (0.\+0-\/100.\+0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/include/\mbox{\hyperlink{speeder_8hpp}{speeder.\+hpp}}\item 
+main/src/\mbox{\hyperlink{speeder_8cpp}{speeder.\+cpp}}\end{DoxyCompactItemize}
