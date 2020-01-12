@@ -44,6 +44,9 @@
 	maxVoltageLevel = maxVolts;
 	init();
 	getVoltage();
+	//analogSetSamples(2);
+	//analogSetCycles(24);
+	//analogSetPinAttenuation(13,ADC_6db);
 }
 
 

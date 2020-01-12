@@ -238,7 +238,6 @@ bool RFID::writeData(byte blockAddress, String stringData) {
 	// authenticate
 	status = (MFRC522::StatusCode) mfrc522->PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, trailerBlock, &key, &(mfrc522->uid)); 
 	// write
-	Serial.printf("Write Data: Block: %i, value %s\n", blockAddress, stringData.c_str());
 	if (status != MFRC522::STATUS_OK) {
 		Serial.print("Authentification failed: ");
 		Serial.println(mfrc522->GetStatusCodeName(status));

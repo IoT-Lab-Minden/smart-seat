@@ -196,6 +196,7 @@ float Servo::getPercentagePosition(){
 bool Servo::moveToTarget(float target, float startSpeed){
 	unsigned long startTime = millis();
 	float currentPosition = getPercentagePosition();
+	bool stopped;
 	
 	Serial.printf("Servo's current position is %.1f%%\n", currentPosition);
 	Serial.printf("Servo tries to reach target %.1f%%\n", target);
@@ -205,40 +206,36 @@ bool Servo::moveToTarget(float target, float startSpeed){
 
 	// drive to target
 	if (currentPosition > target){
-		while (getPercentagePosition() > target && getPercentagePosition() > 0 && millis() < startTime + SERVO_TIMEOUT){
+		stopped = false;
+		while (currentPosition > target && currentPosition > 0 && millis() < startTime + SERVO_TIMEOUT && !stopped){
 			currentPosition = getPercentagePosition();
 			if(currentPosition > target){
 				moveBackward();
 			} else {
 				stop();
-			}
-			if (abs(currentPosition - target) < 10.0){
-				getMotor()->getSpeeder()->turnOn(startSpeed * 0.8);
-			}
-			if (abs(currentPosition - target) < 5.0){
-				getMotor()->getSpeeder()->turnOn(startSpeed * 0.6);
+				stopped = true;
 			}
 			if (abs(currentPosition - target) < 1.0){
 				getMotor()->getSpeeder()->turnOn(startSpeed * 0.2);
+			} else if (abs(currentPosition - target) < 5.0){
+				getMotor()->getSpeeder()->turnOn(startSpeed * 0.8);
 			}
 		}
 		stop();
 	} else {
-		while (getPercentagePosition() < target && getPercentagePosition() < 100 && millis() < startTime + SERVO_TIMEOUT){
+		stopped = false;
+		while (currentPosition < target && currentPosition < 100 && millis() < startTime + SERVO_TIMEOUT && !stopped){
 			currentPosition = getPercentagePosition();
 			if(currentPosition < target){
 				moveForward();
 			} else {
 				stop();
-			}
-			if (abs(currentPosition - target) < 10.0){
-				getMotor()->getSpeeder()->turnOn(startSpeed * 0.8);
-			}
-			if (abs(currentPosition - target) < 5.0){
-				getMotor()->getSpeeder()->turnOn(startSpeed * 0.6);
+				stopped = true;
 			}
 			if (abs(currentPosition - target) < 1.0){
 				getMotor()->getSpeeder()->turnOn(startSpeed * 0.2);
+			} else if (abs(currentPosition - target) < 5.0){
+				getMotor()->getSpeeder()->turnOn(startSpeed * 0.8);
 			}
 		}
 		stop();

@@ -166,7 +166,7 @@ void SmartSeat::init() {
 	// see config.hpp for the settings
 	Servo* servo01 = new Servo(motor01, potentiometer01, false, true, 100.0, 100.0);
 	Servo* servo02 = new Servo(motor02, potentiometer02, false, true, 100.0, 100.0);
-	Servo* servo03 = new Servo(motor03, potentiometer03, false, false, 100.0, 100.0);
+	Servo* servo03 = new Servo(motor03, potentiometer03, false, true, 100.0, 100.0);
 	Servo* servo04 = new Servo(motor04, potentiometer04, true, false, 100.0, 100.0);
 	Servo* servo05 = new Servo(motor05, potentiometer05, false, false, 65, 5.0);
 	Servo* servo06 = new Servo(motor06, potentiometer06, true, false, 80.0, 10.0);

@@ -61,6 +61,7 @@ StateMachine::~StateMachine()
 void StateMachine::writeDataToPICC(float currentPosition)
 {
 	std::vector<Target> piccTargets;
+	Target newTarget;
 	bool dataWritten;
 	std::vector<byte> byteBlock;
 	int sum;
@@ -79,6 +80,9 @@ void StateMachine::writeDataToPICC(float currentPosition)
 				if (piccTargets.at(i).operationIndex == currentState) {
 					// write data on PICC
 					dataWritten = rfidUnit->writeData(piccTargets.at(i).valueBlockOnPICC, String(currentPosition));
+					if (dataWritten) {
+						piccTargets.at(i).percentageGoal = currentPosition;
+					}
 				}
 			}
 			// if current operation has no value on the PICC, take next empty block
@@ -93,6 +97,12 @@ void StateMachine::writeDataToPICC(float currentPosition)
 						if (sum == 0) {
 							dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[i], operations.at(currentState)->getOperationName());
 							dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[i] + 1, String(currentPosition));
+							if (dataWritten) {
+								newTarget.operationIndex = currentState;
+								newTarget.percentageGoal = currentPosition;
+								newTarget.valueBlockOnPICC = RFID_NAME_BLOCKS[i] + 1;
+								rfidUnit->addTarget(newTarget);
+							}
 						}
 					}
 				}
@@ -105,6 +115,12 @@ void StateMachine::writeDataToPICC(float currentPosition)
 			// write new data on PICC
 			dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[0], operations.at(currentState)->getOperationName());
 			dataWritten = rfidUnit->writeData(RFID_NAME_BLOCKS[0] + 1, String(currentPosition));
+			if (dataWritten) {
+				newTarget.operationIndex = currentState;
+				newTarget.percentageGoal = currentPosition;
+				newTarget.valueBlockOnPICC = RFID_NAME_BLOCKS[0] + 1;
+				rfidUnit->addTarget(newTarget);
+			}
 		}
 	}
 }
@@ -257,38 +273,37 @@ void StateMachine::eventRfid()
 	bool targetReached;
 	
 	if (rfidUnit->getCardPresence()){
-		if (operations.at(currentState)->getOperationName() == "rfid"){
-			if (rfidUnit->getCardState() == identified){
-				// erase the 'old' targets
-				rfidUnit->clearTargets();
-				// read operation data from PICC
-				for (int i = 0; i < (sizeof(RFID_NAME_BLOCKS) / sizeof(*RFID_NAME_BLOCKS)); i++){
-					byteBlock = rfidUnit->readBlockArray(RFID_NAME_BLOCKS[i]);
-					readString = rfidUnit->byteVector2String(byteBlock);
-					Serial.printf("readString = '%s'\n", readString.c_str());
-					for (int j = 0; j < operations.size(); j++){
-						if (readString.compareTo(operations.at(j)->getOperationName().substring(0, RFID_BYTES_PER_BLOCK)) == 0){
-							// valid operation found, read next block for assigned value
-							byteBlock = rfidUnit->readBlockArray(RFID_NAME_BLOCKS[i] + 1);
-							readString = rfidUnit->byteVector2String(byteBlock);
-							operationTarget.operationIndex = j;
-							operationTarget.percentageGoal = readString.toFloat();
-							operationTarget.valueBlockOnPICC = RFID_NAME_BLOCKS[i] + 1;
-							if (operationTarget.percentageGoal >= 0 && operationTarget.percentageGoal <= 100){
-								rfidUnit->addTarget(operationTarget);
-								// serial info
-								Serial.printf("Target added: %s to %.1f%%.\n", operations.at(operationTarget.operationIndex)->getOperationName().c_str(), operationTarget.percentageGoal);
-							} 
-						}
+		// erase the 'old' targets
+		rfidUnit->clearTargets();
+		if (rfidUnit->getCardState() == identified){
+			// read operation data from PICC
+			for (int i = 0; i < (sizeof(RFID_NAME_BLOCKS) / sizeof(*RFID_NAME_BLOCKS)); i++){
+				byteBlock = rfidUnit->readBlockArray(RFID_NAME_BLOCKS[i]);
+				readString = rfidUnit->byteVector2String(byteBlock);
+				for (int j = 0; j < operations.size(); j++){
+					if (readString.compareTo(operations.at(j)->getOperationName().substring(0, RFID_BYTES_PER_BLOCK)) == 0){
+						// valid operation found, read next block for assigned value
+						byteBlock = rfidUnit->readBlockArray(RFID_NAME_BLOCKS[i] + 1);
+						readString = rfidUnit->byteVector2String(byteBlock);
+						operationTarget.operationIndex = j;
+						operationTarget.percentageGoal = readString.toFloat();
+						operationTarget.valueBlockOnPICC = RFID_NAME_BLOCKS[i] + 1;
+						if (operationTarget.percentageGoal >= 0 && operationTarget.percentageGoal <= 100){
+							rfidUnit->addTarget(operationTarget);
+							// serial info
+							Serial.printf("Target added: %s to %.1f%%.\n", operations.at(operationTarget.operationIndex)->getOperationName().c_str(), operationTarget.percentageGoal);
+						} 
 					}
 				}
 			}
+		}
 
-			piccTargets = rfidUnit->getTargets();
+		piccTargets = rfidUnit->getTargets();
 
-			// serial info
-			Serial.printf("Targets found on PICC: %i\n", piccTargets.size());
+		// serial info
+		Serial.printf("Targets found on PICC: %i\n", piccTargets.size());
 
+		if (operations.at(currentState)->getOperationName() == "rfid"){
 			for (int i = 0; i < piccTargets.size(); i++){
 
 				// serial info

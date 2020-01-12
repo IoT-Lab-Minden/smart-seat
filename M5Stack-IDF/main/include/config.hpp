@@ -37,7 +37,6 @@ extern "C" {
 #define MOTOR_01_PIN_02 15
 
 // motor 02
-//#define MOTOR_02_PIN_01 17
 #define MOTOR_02_PIN_01 3
 #define MOTOR_02_PIN_02 1
 
@@ -50,7 +49,6 @@ extern "C" {
 #define MOTOR_04_PIN_02 15
 
 // motor 05
-//#define MOTOR_05_PIN_01 17
 #define MOTOR_05_PIN_01 3
 #define MOTOR_05_PIN_02 1
 
@@ -70,27 +68,21 @@ extern "C" {
 
 // potentiometer 03
 #define POTI_03_PIN 13
-#define POTI_03_MIN_VOLTAGE 2180
-#define POTI_03_MAX_VOLTAGE 2260
+#define POTI_03_MIN_VOLTAGE 1060
+#define POTI_03_MAX_VOLTAGE 1120
 
 // potentiometer 04
-//#define POTI_04_PIN 34
-//#define POTI_04_PIN 2
 #define POTI_04_PIN 12
 #define POTI_04_MIN_VOLTAGE 100
 #define POTI_04_MAX_VOLTAGE 2800
 
 // potentiometer 05
 #define POTI_05_PIN 35
-#define POTI_05_MIN_VOLTAGE 500
-#define POTI_05_MAX_VOLTAGE 3000
+#define POTI_05_MIN_VOLTAGE 600
+#define POTI_05_MAX_VOLTAGE 2500
 
 // potentiometer 06
 #define POTI_06_PIN 36
-//#define POTI_06_MIN_VOLTAGE 500
-//#define POTI_06_MAX_VOLTAGE 1530
-//#define POTI_06_MIN_VOLTAGE 0
-//#define POTI_06_MAX_VOLTAGE 1530
 #define POTI_06_MIN_VOLTAGE 200
 #define POTI_06_MAX_VOLTAGE 1300
 
@@ -111,7 +103,6 @@ extern "C" {
 #define PWM_02_RESOLUTION 8
 #define PWM_02_MIN_CYCLE 160
 #define PWM_02_MAX_CYCLE 255
-//#define PWM_02_PIN 2
 #define PWM_02_PIN 17
 
 // lcd

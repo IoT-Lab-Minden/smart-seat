@@ -102,11 +102,15 @@ void Speeder::turnOff(){
  * @return 	nothing
  */
 void Speeder::turnOn(float speed){
+	uint8_t oldDutyCycle = dutyCycle;
     if (speed >= 0 && speed <= 100) {
 		dutyCycle = (uint8_t)(minDutyCycle + speed/100.0 * (maxDutyCycle - minDutyCycle));
 	} 
 	ledcWrite(pwmChannel, dutyCycle);   
+
 	// serial info
-	Serial.printf("Speeder at Pin %i turned on to dutyCycle %i.\n", enablePin, dutyCycle);
+	if (dutyCycle != oldDutyCycle) {
+		Serial.printf("Speeder at Pin %i turned on to dutyCycle %i.\n", enablePin, dutyCycle);
+	}
 }
 
