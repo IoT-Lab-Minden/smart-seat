@@ -4,10 +4,10 @@
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>310</x>
+      <x>300</x>
       <y>20</y>
       <w>440</w>
-      <h>570</h>
+      <h>580</h>
     </coordinates>
     <panel_attributes>SmartSeat
 valign=top</panel_attributes>
